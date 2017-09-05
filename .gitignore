@@ -11,3 +11,6 @@ gulpfile.js
 utils/
 common/
 models/
+app.css
+app.wxss
+gulpfile.js
