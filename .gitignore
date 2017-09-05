@@ -8,3 +8,6 @@ npm-debug.log
 gulpfile.js
 **.css
 .sass-cache
+utils/
+common/
+models/
