@@ -37,7 +37,7 @@ git clone git@github.com:pfan123/wx-market.git
 
 - WXML中引用结构：`<import src="./utils/dial.wxml"/>`
 
-- JS中引用wemark：`import Dial from './utils/dial.js'`
+- JS中引用：`import Dial from './utils/dial.js'`
 
 - JS中实例调用：
 
@@ -56,7 +56,7 @@ git clone git@github.com:pfan123/wx-market.git
 
 - WXML中引用结构：`<import src="./utils/scratch.wxml"/>`
 
-- JS中引用wemark：`import Scratch from './utils/scratch.js'`
+- JS中引用：`import Scratch from './utils/scratch.js'`
 
 - JS中实例调用：
 
@@ -83,7 +83,7 @@ git clone git@github.com:pfan123/wx-market.git
 
 - WXML中引用结构：`<import src="./utils/machine.wxml"/>`
 
-- JS中引用wemark：`import Machine from './utils/machine.js'`
+- JS中引用：`import Machine from './utils/machine.js'`
 
 - JS中实例调用：
 
@@ -112,7 +112,7 @@ git clone git@github.com:pfan123/wx-market.git
 
 - WXML中引用结构：`<import src="./utils/marquee.wxml"/>`
 
-- JS中引用wemark：`import Marquee from './utils/marquee.js'`
+- JS中引用：`import Marquee from './utils/marquee.js'`
 
 - JS中实例调用：
 
@@ -133,7 +133,7 @@ git clone git@github.com:pfan123/wx-market.git
 
 - WXML中引用结构：`<import src="./utils/card.wxml"/>`
 
-- JS中引用wemark：`import Card from './utils/card.js'`
+- JS中引用：`import Card from './utils/card.js'`
 
 - JS中实例调用：
 
