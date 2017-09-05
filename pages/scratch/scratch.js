@@ -15,7 +15,22 @@ Page({
       r: 4,
       awardTxt: '中大奖',
       awardTxtColor: "#1AAD16",
-      awardTxtFontSize: "24px"
+      awardTxtFontSize: "24px",
+      callback: () => {
+        wx.showModal({
+          title: '提示',
+          content: `您中奖了`,
+          showCancel: false,
+          success: (res) => {
+            this.scratch.reset()
+            if (res.confirm) {
+              console.log('用户点击确定')
+            } else if (res.cancel) {
+              console.log('用户点击取消')
+            }
+          }
+        })   
+      }
     })
 
   },
