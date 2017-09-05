@@ -1,0 +1,16 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/rotate/rotate",
+    "pages/scratch/scratch",
+    "pages/slotmachine/machine",
+    "pages/marquee/marquee",
+    "pages/gridcard/gridcard"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "O2营销组件",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  }
+}
