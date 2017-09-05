@@ -39,11 +39,43 @@ git clone git@github.com:pfan123/wx-market.git
 
 - JS中引用wemark：`import Dial from './utils/dial.js'`
 
+- JS中实例调用：
+
+```
+   let dial = new Dial(this, {
+     areaNumber: 8,   //抽奖间隔
+     speed: 16,       //转动速度
+     awardNumer: 2,    //中奖区域从1开始
+     callback: () => {
+       //运动停止回调  
+     }
+   })
+ ```
+
 ➁使用刮刮乐
 
 - WXML中引用结构：`<import src="./utils/scratch.wxml"/>`
 
 - JS中引用wemark：`import Scratch from './utils/scratch.js'`
+
+- JS中实例调用：
+
+```
+  this.scratch = new Scratch(this, {
+    canvasWidth: 197,   //画布宽带
+    canvasHeight: 72,  //画布高度
+    imageResource: './images/placeholder.png', //画布背景
+    r: 4, //笔触半径
+    awardTxt: '中大奖', //底部抽奖文字
+    awardTxtColor: "#1AAD16", //画布颜色
+    awardTxtFontSize: "24px", //文字字体大小
+    callback: () => {
+      //清除画布回调
+    }
+  })
+ ```
+
+ `注意：`小程序无globalCompositeOperation = 'destination-out'属性，所以采用 `clearRect` 做擦除处理
 
 ➂使用老虎机
 
@@ -53,6 +85,27 @@ git clone git@github.com:pfan123/wx-market.git
 
 - JS中引用wemark：`import Machine from './utils/machine.js'`
 
+- JS中实例调用：
+
+``` 
+   this.machine = new Machine(this, {
+     height: 40,  //单个数字高度
+     len: 10,     //单个项目数字个数
+     transY1: 0,
+     num1: 3,    //结束数字
+     transY2: 0,
+     num2: 0,    //结束数字
+     transY3: 0,
+     num3: 0,  //结束数字
+     transY4: 0,
+     num4: 1,  //结束数字
+     speed: 24,  //速度
+     callback: () => {
+         //停止时回调        
+     }      
+   })
+ ```
+
 ➃使用跑马灯
 
 - WXSS中引用样式：`@import './utils/marquee.wxss'`
@@ -61,6 +114,19 @@ git clone git@github.com:pfan123/wx-market.git
 
 - JS中引用wemark：`import Marquee from './utils/marquee.js'`
 
+- JS中实例调用：
+
+``` 
+  this.marquee = new Marquee(this, {
+    len: 9, //宫格个数
+    ret: 9, //抽奖结果对应值1～9
+    speed: 100,  // 速度值
+    callback: () => {
+      //结束回调    
+    }            
+  })
+ ```
+
 ➄使用九宫格翻纸牌
 
 - WXSS中引用样式：`@import './utils/card.wxss'`
@@ -68,6 +134,27 @@ git clone git@github.com:pfan123/wx-market.git
 - WXML中引用结构：`<import src="./utils/card.wxml"/>`
 
 - JS中引用wemark：`import Card from './utils/card.js'`
+
+- JS中实例调用：
+
+``` 
+ this.card = new Card(this,{
+   data: [   //宫格信息，内联样式、是否是反面、是否运动、对应奖项
+     {inlineStyle: '', isBack: false, isMove: false, award: "一等奖"},    
+     {inlineStyle: '', isBack: false, isMove: false, award: "二等奖"},
+     {inlineStyle: '', isBack: false, isMove: false, award: "三等奖"},
+     {inlineStyle: '', isBack: false, isMove: false, award: "四等奖"},
+     {inlineStyle: '', isBack: false, isMove: false, award: "五等奖"},
+     {inlineStyle: '', isBack: false, isMove: false, award: "六等奖"},
+     {inlineStyle: '', isBack: false, isMove: false, award: "七等奖"},
+     {inlineStyle: '', isBack: false, isMove: false, award: "八等奖"},
+     {inlineStyle: '', isBack: false, isMove: false, award: "九等奖"}
+   ],
+   callback: (idx, award) => {
+     //结束回调， 参数对应宫格索引，对应奖项    
+   }
+ })
+ ```
 
 ## 开源协议
 
