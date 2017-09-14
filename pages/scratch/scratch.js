@@ -11,7 +11,8 @@ Page({
     this.scratch = new Scratch(this, {
       canvasWidth: 197,
       canvasHeight: 72,
-      imageResource: './images/placeholder.png',
+      imageResource: 'https://misc.aotu.io/pfan123/wx/placeholder.png',
+      maskColor: "red",
       r: 4,
       awardTxt: '中大奖',
       awardTxtColor: "#1AAD16",

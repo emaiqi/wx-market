@@ -9,7 +9,7 @@
  * 
  * 例如：import Dial from "./utils/dial.js"
  * 
- *  * wxss 文件需要引入 dial.wxss
+ *  wxss 文件需要引入 dial.wxss
  * `@import './utils/dial.wxss'`
  * 
  * wxml 文件需要引入 dial.wxml
@@ -34,10 +34,12 @@ export default class Dial {
     this.deg = 0 
     this.areaNumber = opts.areaNumber  // 奖区数量
     this.speed = opts.speed || 16   // 每帧速度
-    this.awardNumer = opts.awardNumer //中奖区域从1开始
+    this.awardNumer = opts.awardNumer //中奖区域 从1开始
+    this.mode = opts.mode || 2
     this.singleAngle = ''   //每片扇形的角度
     this.isStart = false
     this.endCallBack = opts.callback
+
 
     this.init()
 
@@ -45,21 +47,22 @@ export default class Dial {
   }
 
   init () {
-    let {areaNumber, singleAngle} = this
+    let {areaNumber, singleAngle, mode} = this
     singleAngle = 360 / areaNumber
     this.singleAngle = singleAngle
     this.page.setData({
       dial: {
-        singleAngle: singleAngle
+        singleAngle: singleAngle,
+        mode: mode
       }
     })
   }
 
   start () {
-    let {deg, awardNumer, singleAngle, speed, isStart} = this
+    let {deg, awardNumer, singleAngle, speed, isStart, mode} = this
     if(isStart)return
     this.isStart = true
-    let endAddAngle = (awardNumer - 1) * singleAngle + 360   //中奖角度
+    let endAddAngle = (awardNumer - 1) * singleAngle + singleAngle/2 + 360   //中奖角度
     let rangeAngle = (Math.floor(Math.random() * 4) + 4) * 360 // 随机旋转几圈再停止  
     let cAngle
     deg = 0
@@ -82,20 +85,27 @@ export default class Dial {
       this.page.setData({
         dial: {
           singleAngle: singleAngle,
-          deg: deg
+          deg: deg,
+          mode: mode
         }
       })
     }, 1000/60)      
   }
 
   reset () {
+    let {mode} = this
     this.deg = 0
     this.page.setData({
       dial: {
         singleAngle: this.singleAngle,
-        deg: 0
+        deg: 0,
+        mode: mode
       }
     })    
+  }
+
+  switch (mode) {
+    this.mode = mode
   }
 
 }

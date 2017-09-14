@@ -8,6 +8,7 @@
  * 3.小程序无getImageData获取像素点对比擦除范围
  * 4.小程序canvas绘制图片，真机要正常展示需要使用https协议的图片， http或相对路径微信小程序工具可以展示
  * 遗留问题：图片画的问题
+ *使用 downloadFile 这种方式来先加载图片再绘制
  *
   * * 调用方式：
  * 
@@ -18,7 +19,7 @@
  *      <template is = "scratch" data = "{{scratch, isScroll}}"></template> 
  * 
  * js 中调用
- * 
+ *   maskColor 和 imageResource 都存在时，优先绘制图片
  *  this.scratch = new Scratch(this, {
  *    canvasWidth: 197,   //画布宽带
  *    canvasHeight: 72,  //画布高度
@@ -27,6 +28,7 @@
  *    awardTxt: '中大奖', //底部抽奖文字
  *    awardTxtColor: "#1AAD16", //画布颜色
  *    awardTxtFontSize: "24px", //文字字体大小
+ *    maskColor: "red",
  *    callback: () => {
  *      //清除画布回调
  *    }
@@ -40,6 +42,7 @@ export default class Scratch {
     this.canvasWidth = opts.canvasWidth
     this.canvasHeight = opts.canvasHeight
     this.imageResource = opts.imageResource
+    this.maskColor = opts.maskColor
     // this.canvasId = opts.canvasId
     this.r = opts.r || 4
     this.endCallBack = opts.callback
@@ -72,12 +75,23 @@ export default class Scratch {
   }
 
   init () {
-    let {canvasWidth, canvasHeight, imageResource} = this
+    let {canvasWidth, canvasHeight, imageResource, maskColor} = this
+    let self = this
     this.ctx = wx.createCanvasContext('scratch')
-    // this.ctx.drawImage(imageResource, 0, 0, canvasWidth, canvasHeight)
-    this.ctx.setFillStyle('red')
-    this.ctx.fillRect(0, 0, canvasWidth, canvasHeight)
-    this.ctx.draw()
+    this.ctx.clearRect(0, 0, canvasWidth, canvasHeight) 
+    if(imageResource && imageResource != ''){
+      wx.downloadFile({
+        url: imageResource, 
+        success: (res) => {
+          self.ctx.drawImage(res.tempFilePath, 0, 0, canvasWidth, canvasHeight)
+          self.ctx.draw()
+        }
+      })      
+    }else{
+      self.ctx.setFillStyle(maskColor)
+      self.ctx.fillRect(0, 0, canvasWidth, canvasHeight) 
+      self.ctx.draw()   
+    }
   }
 
   drawRect (x, y) {
@@ -149,6 +163,10 @@ export default class Scratch {
       })      
     }
   } 
+
+  reset () {
+    this.init()
+  }
 
   imgOnLoad () {
     
