@@ -196,7 +196,7 @@ git clone git@github.com:pfan123/wx-market.git
 
 ## 组件预览
 
- ![营销组件二维码](http://7xrig5.com1.z0.glb.clouddn.com/wx_basicprofile.jpg)
+ ![营销组件二维码](http://img.pfan123.com/wx_basicprofile.jpg?imageView2/1/w/200/h/200)
 
 ## 开源协议
 
