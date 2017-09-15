@@ -30,7 +30,7 @@
 export default class Marquee {
   constructor (pageContext, opts) {
     this.page = pageContext
-    this.len = opts.len
+    this.len = opts.len || 8
     this.ret = opts.ret
     this.speed = opts.speed
     this.isStart = false
@@ -61,7 +61,7 @@ export default class Marquee {
 
         self.page.setData({
           marquee: {
-            idx: count % 9  == 0 ? 9 : count % 9
+            idx: count % 8  == 0 ? 8 : count % 8
           }
         })
         

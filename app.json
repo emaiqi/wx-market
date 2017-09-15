@@ -5,7 +5,9 @@
     "pages/scratch/scratch",
     "pages/slotmachine/machine",
     "pages/marquee/marquee",
-    "pages/gridcard/gridcard"
+    "pages/gridcard/gridcard",
+    "pages/shake/shake",
+    "pages/gestureLock/gestureLock"
   ],
   "window": {
     "navigationBarTextStyle": "black",

@@ -25,7 +25,17 @@ Page({
         id: 'gridcard',
         sub: 'gridcard',
         name: '九宫格翻纸牌'
-      }
+      },
+      {
+        id: 'shake',
+        sub: 'shake',
+        name: '摇一摇'
+      },          
+      {
+        id: 'gestureLock',
+        sub: 'gestureLock',
+        name: '手势解锁'
+      }      
     ]
   }
 })

@@ -9,6 +9,7 @@
   margin: 0 10rpx 10rpx 0;
   opacity: .8;
   background: #1E9FD9;
+  box-sizing: border-box;
 }
 .marquee_wp .marquee_item.on{
   opacity: 1;
@@ -20,4 +21,12 @@
 }
 .marquee_wp .marquee_item:nth-child(3n){
   margin-right: 0;
+}
+.marquee_wp .marquee_item_btn{
+  background: transparent;
+}
+.marquee_wp .marquee_item_btn text{
+  display: block;
+  text-align: center;
+  color: #fff;
 }

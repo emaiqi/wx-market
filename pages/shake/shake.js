@@ -1,4 +1,4 @@
-import Marquee from "./utils/marquee.js"
+import Shake from "./utils/shake.js"
 
 Page({
   data: {
@@ -6,20 +6,20 @@ Page({
   },
 
   onLoad () {
-    this.marquee = new Marquee(this, {
-      ret: 8, //取值1～8
-      speed: 100,
+    this.shake = new Shake(this, {
+      shakeThreshold: 100, //阈值
       callback: () => {
         wx.showModal({
           title: '提示',
           content: '恭喜您，中奖了',
           showCancel: false,
           success: (res) => {
-            this.marquee.reset()
             if (res.confirm) {
+              this.shake.isStart = true
               console.log('用户点击确定')
             } else if (res.cancel) {
               console.log('用户点击取消')
+              this.shake.isStart = true
             }
           }
         })        
@@ -30,5 +30,5 @@ Page({
   onReady () {
     console.log("onReady")    
   }
-
+  
 })

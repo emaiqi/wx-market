@@ -15,7 +15,7 @@ Page({
       maskColor: "red",
       r: 4,
       awardTxt: '中大奖',
-      awardTxtColor: "#1AAD16",
+      awardTxtColor: "#3985ff",
       awardTxtFontSize: "24px",
       callback: () => {
         wx.showModal({
