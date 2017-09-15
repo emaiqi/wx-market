@@ -1,5 +1,5 @@
 /**
- * @description 九宫格翻纸盘游戏逻辑部分
+ * @description 九宫格翻纸盘组件逻辑部分
  * @author pfan
  * 
  * 问题：

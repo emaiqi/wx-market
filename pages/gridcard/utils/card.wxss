@@ -18,6 +18,11 @@
 }
 /*    -webkit-transform: translate3d(240rpx, 102rpx, 0);
     transform: translate3d(240rpx, 102rpx, 0);*/
+.gridcard .gridcard_item image{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
 .gridcard .gridcard_item .gridcard_front,.gridcard .gridcard_item .gridcard_back{
   position: absolute;
   top: 0;

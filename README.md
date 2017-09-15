@@ -31,7 +31,7 @@ git clone git@github.com:pfan123/wx-market.git
 
 拷贝所需组件，到小程序目录pages路由目录
 
-➀使用大转盘
+➀使用大转盘组件
 
 - WXSS中引用样式：`@import './utils/dial.wxss'`
 
@@ -52,7 +52,7 @@ git clone git@github.com:pfan123/wx-market.git
    })
  ```
 
-➁使用刮刮乐
+➁使用刮刮乐组件
 
 - WXML中引用结构：`<import src="./utils/scratch.wxml"/>`
 
@@ -77,7 +77,7 @@ git clone git@github.com:pfan123/wx-market.git
 
  `注意：`小程序无globalCompositeOperation = 'destination-out'属性，所以采用 `clearRect` 做擦除处理
 
-➂使用老虎机
+➂使用老虎机组件
 
 - WXSS中引用样式：`@import './utils/machine.wxss'`
 
@@ -106,7 +106,7 @@ git clone git@github.com:pfan123/wx-market.git
    })
  ```
 
-➃使用跑马灯
+➃使用跑马灯组件
 
 - WXSS中引用样式：`@import './utils/marquee.wxss'`
 
@@ -127,7 +127,7 @@ git clone git@github.com:pfan123/wx-market.git
   })
  ```
 
-➄使用九宫格翻纸牌
+➄使用九宫格翻纸牌组件
 
 - WXSS中引用样式：`@import './utils/card.wxss'`
 
@@ -155,6 +155,48 @@ git clone git@github.com:pfan123/wx-market.git
    }
  })
  ```
+
+ ➅使用摇一摇组件
+
+- WXSS中引用样式：`@import './utils/shake.wxss'`
+
+- WXML中引用结构：`<import src="./utils/shake.wxml"/>`
+
+- JS中引用：`import Shake from './utils/shake.js'`
+
+- JS中实例调用：
+
+``` 
+  this.shake = new Shake(this, {
+    shakeThreshold: 70, //阈值
+    callback: () => {
+          
+    }            
+  })
+ ```
+
+ ➆使用手势解锁组件
+
+ - WXSS中引用样式：`@import './utils/lock.wxss'`
+
+- WXML中引用结构：`<import src="./utils/lock.wxml"/>`
+
+- JS中引用：`import Lock from './utils/lock.js'`
+
+- JS中实例调用：
+
+``` 
+ this.lock = new Lock(this, {
+   canvasWidth: 300,
+   canvasHeight: 300,
+   canvasId: 'canvasLock',
+   drawColor: '#3985ff'        
+ })
+ ```
+
+## 组件预览
+
+ [!营销组件二维码](http://7xrig5.com1.z0.glb.clouddn.com/wx_basicprofile.jpg)
 
 ## 开源协议
 

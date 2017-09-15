@@ -1,5 +1,5 @@
 /**
- * @description 跑马灯游戏逻辑部分
+ * @description 摇一摇组件逻辑部分
  * @author pfan
  * * 调用方式：
  * 
