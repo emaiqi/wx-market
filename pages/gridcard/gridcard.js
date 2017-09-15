@@ -21,7 +21,7 @@ Page({
       callback: (idx, award) => {
         wx.showModal({
           title: '提示',
-          content: `您点击了第${idx}个方块，中${award}`,
+          content: `您点击了第${idx+1}个方块，中${award}`,
           showCancel: false,
           success: (res) => {
             this.card.reset()
