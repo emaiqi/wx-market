@@ -113,7 +113,7 @@ export default class Lock {
       let now = new Date()
       let duration = now - prev
       // 帧频率大于60丢弃
-      if (duration < Math.floor(1000 / LIMIT) || !this.touchFlag) return;
+      if (duration < Math.floor(1000 / LIMIT) ) return;
       prev = now
 
       if(this.touchFlag){
@@ -145,6 +145,7 @@ export default class Lock {
   }
 
   update(po) { // 核心变换方法在touchmove时候调用
+      if( typeof po.x == 'undefined' || typeof po.y == 'undefined')return
       this.ctx.clearRect(0, 0, this.canvasWidth, this.canvasHeight)
       for (let i = 0 ; i < this.arr.length ; i++) { // 每帧先把面板画出来
           this.drawCle(this.arr[i].x, this.arr[i].y)
