@@ -1,4 +1,4 @@
-<import src="utils/machine.wxml" />
+<import src="../components/machine/machine.wxml" />
 
 <view class="index">
   <view class="index-hd">

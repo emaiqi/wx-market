@@ -1,4 +1,4 @@
-@import './utils/lock.wxss'
+@import '../components/lock/lock.wxss'
 
 .index-hd {
   padding: 80rpx;

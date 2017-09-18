@@ -1,10 +1,9 @@
-import Scratch from "./utils/scratch.js"
+import Scratch from "../components/scratch/scratch.js"
 
 Page({
   data: {
     isStart: true,
-    txt: "开始刮奖",
-    imageResource: "./images/placeholder.png"
+    txt: "开始刮奖"
   }, 
 
   onLoad () {

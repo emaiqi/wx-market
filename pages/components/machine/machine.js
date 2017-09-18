@@ -4,13 +4,13 @@
  * 
   * * 调用方式：
  * 
- * 例如：import Machine from "./utils/machine.js"
+ * 例如：import Machine from "../components/machine/machine.js"
  *
  *  wxss 文件需要引入 machine.wxss
- * `@import './utils/machine.wxss'`
+ * `@import '../components/machine/machine.wxss'`
  * 
  * wxml 文件需要引入 machine.wxml
- * 例如：<import src="utils/machine.wxml" />
+ * 例如：<import src="../components/machine/machine.wxml" />
  *      <template is = "machine" data="{{...machine}}"></template> 
  * 
  * js 中调用

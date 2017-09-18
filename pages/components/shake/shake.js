@@ -3,13 +3,13 @@
  * @author pfan
  * * 调用方式：
  * 
- * 例如：import Shake from "./utils/shake.js"
+ * 例如：import Shake from "../components/shake/shake.js"
  * 
  * wxss 文件需要引入 shake.wxss
- * `@import './utils/shake.wxss'`
+ * `@import '../components/shake/shake.wxss'`
  * 
  * wxml 文件需要引入 shake.wxml
- * 例如：<import src="utils/shake.wxml" />
+ * 例如：<import src="../components/shake/shake.wxml" />
  *      <template is = "shake" data="{{anim}}"></template> 
  * 
  * js 中调用

@@ -1,4 +1,4 @@
-import Dial from "./utils/dial.js"
+import Dial from "../components/rotate/dial.js"
 
 Page({
   data: {

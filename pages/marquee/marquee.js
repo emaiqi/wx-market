@@ -1,4 +1,4 @@
-import Marquee from "./utils/marquee.js"
+import Marquee from "../components/marquee/marquee.js"
 
 Page({
   data: {

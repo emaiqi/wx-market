@@ -1,4 +1,4 @@
-import Card from "./utils/card.js"
+import Card from "../components/card/card.js"
 
 Page({
   data: {

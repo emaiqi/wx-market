@@ -1,4 +1,4 @@
-<import src="utils/marquee.wxml" />
+<import src="../components/marquee/marquee.wxml" />
 
 <view class="index">
   <view class="index-hd">

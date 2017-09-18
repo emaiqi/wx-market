@@ -1,4 +1,4 @@
-@import './utils/machine.wxss'
+@import '../components/machine/machine.wxss'
 
 .index-hd {
   padding: 80rpx;
