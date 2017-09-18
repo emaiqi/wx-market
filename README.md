@@ -41,7 +41,7 @@ git clone git@github.com:pfan123/wx-market.git
 
 - JS中实例调用：
 
-```
+```js
    let dial = new Dial(this, {
      areaNumber: 8,   //抽奖间隔
      speed: 16,       //转动速度
@@ -61,7 +61,7 @@ git clone git@github.com:pfan123/wx-market.git
 
 - JS中实例调用：
 
-```
+```js
   this.scratch = new Scratch(this, {
     canvasWidth: 197,   //画布宽带
     canvasHeight: 72,  //画布高度
@@ -88,7 +88,7 @@ git clone git@github.com:pfan123/wx-market.git
 
 - JS中实例调用：
 
-``` 
+```js
    this.machine = new Machine(this, {
      height: 40,  //单个数字高度
      len: 10,     //单个项目数字个数
@@ -117,7 +117,7 @@ git clone git@github.com:pfan123/wx-market.git
 
 - JS中实例调用：
 
-``` 
+```js 
   this.marquee = new Marquee(this, {
     len: 9, //宫格个数
     ret: 9, //抽奖结果对应值1～9
@@ -138,7 +138,7 @@ git clone git@github.com:pfan123/wx-market.git
 
 - JS中实例调用：
 
-``` 
+```js 
  this.card = new Card(this,{
    data: [   //宫格信息，内联样式、是否是反面、是否运动、对应奖项
      {inlineStyle: '', isBack: false, isMove: false, award: "一等奖"},    
@@ -167,7 +167,7 @@ git clone git@github.com:pfan123/wx-market.git
 
 - JS中实例调用：
 
-``` 
+```js 
   this.shake = new Shake(this, {
     shakeThreshold: 70, //阈值
     callback: () => {
@@ -186,7 +186,7 @@ git clone git@github.com:pfan123/wx-market.git
 
 - JS中实例调用：
 
-``` 
+```js 
  this.lock = new Lock(this, {
    canvasWidth: 300,
    canvasHeight: 300,
