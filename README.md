@@ -19,7 +19,13 @@
 git clone git@github.com:pfan123/wx-market.git
 ```
 
-2.查看组件文件
+2.安装包依赖
+
+```
+npm i 
+```
+
+3.查看组件文件
 
 - 大转盘（Rotate）: `/pages/rotate/utils/`
 - 刮刮乐 (scratch ticket) : `/pages/scratch/utils/`
@@ -27,7 +33,7 @@ git clone git@github.com:pfan123/wx-market.git
 - 跑马灯 （marquee）: `/pages/marquee/utils/`
 - 九宫格翻纸牌 (grid card): `/pages/gridcard/utils/`
 
-3.使用引入方式
+4.使用引入方式
 
 拷贝所需组件，到小程序目录pages路由目录
 
