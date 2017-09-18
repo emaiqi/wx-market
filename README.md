@@ -46,6 +46,7 @@ git clone git@github.com:pfan123/wx-market.git
      areaNumber: 8,   //抽奖间隔
      speed: 16,       //转动速度
      awardNumer: 2,    //中奖区域从1开始
+     mode: 1,    //1是指针旋转，2为转盘旋转
      callback: () => {
        //运动停止回调  
      }
