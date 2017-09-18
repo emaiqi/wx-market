@@ -3,13 +3,13 @@
  * @author pfan
  * * 调用方式：
  * 
- * 例如：import Marquee from "../components/marquee/marquee.js"
+ * 例如：import Marquee from "../../components/marquee/marquee.js"
  * 
  * wxss 文件需要引入 marquee.wxss
- * `@import '../components/marquee/marquee.wxss'`
+ * `@import '../../components/marquee/marquee.wxss'`
  * 
  * wxml 文件需要引入 marquee.wxml
- * 例如：<import src="../components/marquee/marquee.wxml" />
+ * 例如：<import src="../../components/marquee/marquee.wxml" />
  *      <template is = "marquee" data="{{...marquee}}"></template> 
  * 
  * js 中调用

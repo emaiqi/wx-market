@@ -12,10 +12,10 @@
  *
   * * 调用方式：
  * 
- * 例如：import Scratch from "../components/scratch/scratch.js"
+ * 例如：import Scratch from "../../components/scratch/scratch.js"
  * 
  * wxml 文件需要引入 scratch.wxml
- * 例如：<import src="../components/scratch/scratch.wxml" />
+ * 例如：<import src="../../components/scratch/scratch.wxml" />
  *      <template is = "scratch" data = "{{scratch, isScroll}}"></template> 
  * 
  * js 中调用

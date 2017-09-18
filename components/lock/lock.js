@@ -3,13 +3,13 @@
  * @author pfan
  * * 调用方式：
  * 
- * 例如：import Shake from "../components/lock/lock.js"
+ * 例如：import Shake from "../../components/lock/lock.js"
  * 
  * wxss 文件需要引入 lock.wxss
- * `@import '../components/lock/lock.wxss'`
+ * `@import '../../components/lock/lock.wxss'`
  * 
  * wxml 文件需要引入 lock.wxml
- * 例如：<import src="../components/lock/lock.wxml" />
+ * 例如：<import src="../../components/lock/lock.wxml" />
  *      <template is = "lock" data="{{anim}}"></template> 
  * 
  * js 中调用

@@ -7,13 +7,13 @@
  *
  * * 调用方式：
  * 
- * 例如：import Card from "../component/card/card.js"
+ * 例如：import Card from "../../component/card/card.js"
  *
  *  wxss 文件需要引入 card.wxss
- * `@import '../component/card/card.wxss'`
+ * `@import '../../component/card/card.wxss'`
  * 
  * wxml 文件需要引入 card.wxml
- * 例如：<import src="../component/card/card.wxml" />
+ * 例如：<import src="../../component/card/card.wxml" />
  *      <template is = "card" data="{{card}}"></template> 
  * 
  * js 中调用

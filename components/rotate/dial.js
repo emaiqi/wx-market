@@ -7,13 +7,13 @@
  *
  * * 调用方式：
  * 
- * 例如：import Dial from "../components/rotate/dial.js"
+ * 例如：import Dial from "../../components/rotate/dial.js"
  * 
  *  wxss 文件需要引入 dial.wxss
- * `@import '../components/rotate/dial.wxss'`
+ * `@import '../../components/rotate/dial.wxss'`
  * 
  * wxml 文件需要引入 dial.wxml
- * 例如：<import src="../components/rotate/dial.wxml" />
+ * 例如：<import src="../../components/rotate/dial.wxml" />
  *      <template is = "dial" data="{{...dial}}"></template> 
  * 
  * js 中调用
