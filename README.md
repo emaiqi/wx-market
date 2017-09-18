@@ -94,7 +94,7 @@ npm i
 
  `注意：`小程序无globalCompositeOperation = 'destination-out'属性，所以采用 `clearRect` 做擦除处理
 
- ![刮刮乐组件](http://img.pfan123.com/wx_market_2.jpeg?imageView2/1/w/356/h/634) 
+ ![刮刮乐组件](http://img.pfan123.com/wx_market_3.jpeg?imageView2/1/w/356/h/634) 
 
 ➂使用老虎机组件
 
@@ -125,7 +125,7 @@ npm i
    })
  ```
 
-  ![老虎机组件](http://img.pfan123.com/wx_market_2.jpeg?imageView2/1/w/356/h/634) 
+  ![老虎机组件](http://img.pfan123.com/wx_market_4.jpeg?imageView2/1/w/356/h/634) 
 
 ➃使用跑马灯组件
 
@@ -148,7 +148,7 @@ npm i
   })
  ```
 
-  ![跑马灯组件](http://img.pfan123.com/wx_market_2.jpeg?imageView2/1/w/356/h/634)  
+  ![跑马灯组件](http://img.pfan123.com/wx_market_5.jpeg?imageView2/1/w/356/h/634)  
 
 ➄使用九宫格翻纸牌组件
 
@@ -179,7 +179,7 @@ npm i
  })
  ```
 
-  ![九宫格翻纸组件](http://img.pfan123.com/wx_market_2.jpeg?imageView2/1/w/356/h/634)  
+  ![九宫格翻纸组件](http://img.pfan123.com/wx_market_6.jpeg?imageView2/1/w/356/h/634)  
 
  ➅使用摇一摇组件
 
@@ -200,7 +200,7 @@ npm i
   })
  ```
 
-  ![摇一摇组件](http://img.pfan123.com/wx_market_2.jpeg?imageView2/1/w/356/h/634)   
+  ![摇一摇组件](http://img.pfan123.com/wx_market_7.jpeg?imageView2/1/w/356/h/634)   
 
  ➆使用手势解锁组件
 
@@ -221,11 +221,8 @@ npm i
  })
  ```   
 
-![手势解锁组件](http://img.pfan123.com/wx_market_2.jpeg?imageView2/1/w/356/h/634)
+![手势解锁组件](http://img.pfan123.com/wx_market_8.jpeg?imageView2/1/w/356/h/634)
 
-## 组件预览
-
- ![营销组件二维码](http://img.pfan123.com/wx_basicprofile.jpg?imageView2/1/w/200/h/200)
 
 ## 开源协议
 
