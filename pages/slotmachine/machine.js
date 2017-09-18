@@ -1,4 +1,4 @@
-import Machine from "../components/machine/machine.js"
+import Machine from "../../components/machine/machine.js"
 
 Page({
   data: {

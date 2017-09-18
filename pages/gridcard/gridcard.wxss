@@ -1,4 +1,4 @@
-@import '../components/card/card.wxss'
+@import '../../components/card/card.wxss'
 
 .index-hd {
   padding: 80rpx;

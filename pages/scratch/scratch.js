@@ -1,4 +1,4 @@
-import Scratch from "../components/scratch/scratch.js"
+import Scratch from "../../components/scratch/scratch.js"
 
 Page({
   data: {

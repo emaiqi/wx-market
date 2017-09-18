@@ -1,4 +1,4 @@
-@import '../components/marquee/marquee.wxss'
+@import '../../components/marquee/marquee.wxss'
 
 .index-hd {
   padding: 80rpx;

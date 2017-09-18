@@ -1,4 +1,4 @@
-import Lock from "../components/lock/lock.js"
+import Lock from "../../components/lock/lock.js"
 
 Page({
   data: {

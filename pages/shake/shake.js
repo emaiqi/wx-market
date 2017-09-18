@@ -1,4 +1,4 @@
-import Shake from "../components/shake/shake.js"
+import Shake from "../../components/shake/shake.js"
 
 Page({
   data: {

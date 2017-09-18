@@ -1,4 +1,4 @@
-@import '../components/shake/shake.wxss'
+@import '../../components/shake/shake.wxss'
 
 .index-hd {
   padding: 80rpx;

@@ -1,4 +1,4 @@
-@import '/pages/components/rotate/dial.wxss'
+@import '../../components/rotate/dial.wxss'
 .index-hd {
   padding: 80rpx;
   text-align: center;
