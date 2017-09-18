@@ -215,7 +215,7 @@ npm i
 ![老虎机组件](http://img.pfan123.com/wx_market_4.jpeg?imageView2/1/w/356/h/634) 
 ![跑马灯组件](http://img.pfan123.com/wx_market_5.jpeg?imageView2/1/w/356/h/634) 
 ![九宫格翻纸组件](http://img.pfan123.com/wx_market_6.jpeg?imageView2/1/w/356/h/634)  
-![摇一摇组件](http://img.pfan123.com/wx_market_7.jpeg?imageView2/1/w/356/h/634)![手势解锁组件](http://img.pfan123.com/wx_market_8.jpeg?imageView2/1/w/356/h/634) 
+![摇一摇组件](http://img.pfan123.com/wx_market_7.jpeg?imageView2/1/w/356/h/634)  ![手势解锁组件](http://img.pfan123.com/wx_market_8.jpeg?imageView2/1/w/356/h/634) 
 
 ## 更新记录
 
