@@ -45,6 +45,7 @@ export default class Lock {
     this.page.onTouchstart = this.onTouchstart.bind(this)
     this.page.onTouchmove = this.onTouchmove.bind(this)
     this.page.onTouchend = this.onTouchend.bind(this)
+    this.page.onTouchcancel = this.onTouchcancel.bind(this)
   }
 
   init() {
@@ -122,7 +123,7 @@ export default class Lock {
 
   onTouchend (e) {
       if (this.touchFlag) {
-          this.touchFlag = false;
+          this.touchFlag = false
           this.storePass(this.lastPoint)
 
           //300ms 重置
@@ -130,6 +131,10 @@ export default class Lock {
               this.reset()
           }, 1000);
       }
+  }
+
+  onTouchcancel (e) {
+    this.touchFlag = false
   }
 
   getPosition(e) { // 获取touch点相对于canvas的坐标
