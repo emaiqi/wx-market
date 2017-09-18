@@ -3,7 +3,7 @@
 营销组件， WeChat marketing components.
 
 
-## 支持营销类型
+## 支持营销玩法
 
 - 大转盘
 - 刮刮乐 
@@ -12,8 +12,6 @@
 - 九宫格翻纸牌 
 - 摇一摇 
 - 手势解锁
-
- ![支持营销](http://img.pfan123.com/wx_market_1.jpeg?imageView2/1/w/356/h/634)
 
 
 ## 如何使用
@@ -66,9 +64,6 @@ npm i
    })
  ```
 
- ![大转盘组件](http://img.pfan123.com/wx_market_2.jpeg?imageView2/1/w/356/h/634)
-
-
 ➁使用刮刮乐组件
 
 - WXML中引用结构：`<import src="./utils/scratch.wxml"/>`
@@ -94,7 +89,6 @@ npm i
 
  `注意：`小程序无globalCompositeOperation = 'destination-out'属性，所以采用 `clearRect` 做擦除处理
 
- ![刮刮乐组件](http://img.pfan123.com/wx_market_3.jpeg?imageView2/1/w/356/h/634) 
 
 ➂使用老虎机组件
 
@@ -125,8 +119,6 @@ npm i
    })
  ```
 
-  ![老虎机组件](http://img.pfan123.com/wx_market_4.jpeg?imageView2/1/w/356/h/634) 
-
 ➃使用跑马灯组件
 
 - WXSS中引用样式：`@import './utils/marquee.wxss'`
@@ -146,9 +138,7 @@ npm i
       //结束回调    
     }            
   })
- ```
-
-  ![跑马灯组件](http://img.pfan123.com/wx_market_5.jpeg?imageView2/1/w/356/h/634)  
+ ``` 
 
 ➄使用九宫格翻纸牌组件
 
@@ -179,8 +169,6 @@ npm i
  })
  ```
 
-  ![九宫格翻纸组件](http://img.pfan123.com/wx_market_6.jpeg?imageView2/1/w/356/h/634)  
-
  ➅使用摇一摇组件
 
 - WXSS中引用样式：`@import './utils/shake.wxss'`
@@ -199,8 +187,6 @@ npm i
     }            
   })
  ```
-
-  ![摇一摇组件](http://img.pfan123.com/wx_market_7.jpeg?imageView2/1/w/356/h/634)   
 
  ➆使用手势解锁组件
 
@@ -221,8 +207,28 @@ npm i
  })
  ```   
 
-![手势解锁组件](http://img.pfan123.com/wx_market_8.jpeg?imageView2/1/w/356/h/634)
+## 效果图展示
 
+![支持营销](http://img.pfan123.com/wx_market_1.jpeg?imageView2/1/w/356/h/634)
+
+![大转盘组件](http://img.pfan123.com/wx_market_2.jpeg?imageView2/1/w/356/h/634)
+
+![刮刮乐组件](http://img.pfan123.com/wx_market_3.jpeg?imageView2/1/w/356/h/634) 
+
+![老虎机组件](http://img.pfan123.com/wx_market_4.jpeg?imageView2/1/w/356/h/634) 
+
+![跑马灯组件](http://img.pfan123.com/wx_market_5.jpeg?imageView2/1/w/356/h/634) 
+
+![九宫格翻纸组件](http://img.pfan123.com/wx_market_6.jpeg?imageView2/1/w/356/h/634)  
+
+![摇一摇组件](http://img.pfan123.com/wx_market_7.jpeg?imageView2/1/w/356/h/634)  
+
+![手势解锁组件](http://img.pfan123.com/wx_market_8.jpeg?imageView2/1/w/356/h/634) 
+
+## 更新记录
+
+- [ ] 动画性能优化
+- [x] add legend  2016-11-29
 
 ## 开源协议
 
