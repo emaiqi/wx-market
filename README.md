@@ -219,9 +219,9 @@ npm i
    canvasId: 'canvasLock',
    drawColor: '#3985ff'        
  })
- ```
+ ```   
 
-  ![手势解锁组件](http://img.pfan123.com/wx_market_2.jpeg?imageView2/1/w/356/h/634)    
+![手势解锁组件](http://img.pfan123.com/wx_market_2.jpeg?imageView2/1/w/356/h/634)
 
 ## 组件预览
 
