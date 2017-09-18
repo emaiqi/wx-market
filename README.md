@@ -30,13 +30,13 @@ npm i
 
 3.查看组件文件
 
-- 大转盘（Rotate）: `/pages/components/rotate/`
-- 刮刮乐 (scratch ticket) : `/pages/components/scratch/`
-- 老虎机	（slot machine） : `/pages/components/machine/`
-- 跑马灯 （marquee）: `/pages/components/marquee/`
-- 九宫格翻纸牌 (grid card): `/pages/components/card/`
-- 摇一摇 (shake): `/pages/components/shake/`
-- 手势解锁 (gesture lock): `/pages/components/lock/`
+- 大转盘（Rotate）: `/components/rotate/`
+- 刮刮乐 (scratch ticket) : `/components/scratch/`
+- 老虎机	（slot machine） : `/components/machine/`
+- 跑马灯 （marquee）: `/components/marquee/`
+- 九宫格翻纸牌 (grid card): `/components/card/`
+- 摇一摇 (shake): `/components/shake/`
+- 手势解锁 (gesture lock): `/components/lock/`
 
 4.使用引入方式
 
@@ -44,11 +44,11 @@ npm i
 
 ➀使用大转盘组件
 
-- WXSS中引用样式：`@import '../components/rotate/dial.wxss'`
+- WXSS中引用样式：`@import '../../components/rotate/dial.wxss'`
 
-- WXML中引用结构：`<import src="../components/rotate/dial.wxml"/>`
+- WXML中引用结构：`<import src="../../components/rotate/dial.wxml"/>`
 
-- JS中引用：`import Dial from '../components/rotate/dial.js'`
+- JS中引用：`import Dial from '../../components/rotate/dial.js'`
 
 - JS中实例调用：
 
@@ -66,9 +66,9 @@ npm i
 
 ➁使用刮刮乐组件
 
-- WXML中引用结构：`<import src="../components/scratch/scratch.wxml"/>`
+- WXML中引用结构：`<import src="../../components/scratch/scratch.wxml"/>`
 
-- JS中引用：`import Scratch from '../components/scratch/scratch.js'`
+- JS中引用：`import Scratch from '../../components/scratch/scratch.js'`
 
 - JS中实例调用：
 
@@ -92,11 +92,11 @@ npm i
 
 ➂使用老虎机组件
 
-- WXSS中引用样式：`@import '../components/machine/machine.wxss'`
+- WXSS中引用样式：`@import '../../components/machine/machine.wxss'`
 
-- WXML中引用结构：`<import src="../components/machine/machine.wxml"/>`
+- WXML中引用结构：`<import src="../../components/machine/machine.wxml"/>`
 
-- JS中引用：`import Machine from '../components/machine/machine.js'`
+- JS中引用：`import Machine from '../../components/machine/machine.js'`
 
 - JS中实例调用：
 
@@ -121,11 +121,11 @@ npm i
 
 ➃使用跑马灯组件
 
-- WXSS中引用样式：`@import '../components/marquee/marquee.wxss'`
+- WXSS中引用样式：`@import '../../components/marquee/marquee.wxss'`
 
-- WXML中引用结构：`<import src="../components/marquee/marquee.wxml"/>`
+- WXML中引用结构：`<import src="../../components/marquee/marquee.wxml"/>`
 
-- JS中引用：`import Marquee from '../components/marquee/marquee.js'`
+- JS中引用：`import Marquee from '../../components/marquee/marquee.js'`
 
 - JS中实例调用：
 
@@ -142,11 +142,11 @@ npm i
 
 ➄使用九宫格翻纸牌组件
 
-- WXSS中引用样式：`@import '../components/card/card.wxss'`
+- WXSS中引用样式：`@import '../../components/card/card.wxss'`
 
-- WXML中引用结构：`<import src="../components/card/card.wxml"/>`
+- WXML中引用结构：`<import src="../../components/card/card.wxml"/>`
 
-- JS中引用：`import Card from '../components/card/card.js'`
+- JS中引用：`import Card from '../../components/card/card.js'`
 
 - JS中实例调用：
 
@@ -171,11 +171,11 @@ npm i
 
  ➅使用摇一摇组件
 
-- WXSS中引用样式：`@import '../components/shake/shake.wxss'`
+- WXSS中引用样式：`@import '../../components/shake/shake.wxss'`
 
-- WXML中引用结构：`<import src="../components/shake/shake.wxml"/>`
+- WXML中引用结构：`<import src="../../components/shake/shake.wxml"/>`
 
-- JS中引用：`import Shake from '../components/shake/shake.js'`
+- JS中引用：`import Shake from '../../components/shake/shake.js'`
 
 - JS中实例调用：
 
@@ -190,11 +190,11 @@ npm i
 
  ➆使用手势解锁组件
 
- - WXSS中引用样式：`@import '../components/lock/lock.wxss'`
+ - WXSS中引用样式：`@import '../../components/lock/lock.wxss'`
 
-- WXML中引用结构：`<import src="../components/lock/lock.wxml"/>`
+- WXML中引用结构：`<import src="../../components/lock/lock.wxml"/>`
 
-- JS中引用：`import Lock from '../components/lock/lock.js'`
+- JS中引用：`import Lock from '../../components/lock/lock.js'`
 
 - JS中实例调用：
 
