@@ -12,7 +12,7 @@
       <image src = "/assets/marquee_lottery3.png"/>
     </view>
 
-    <view class="marquee_item {{idx == 4 ? 'on' : ''}}" >
+    <view class="marquee_item {{idx == 8 ? 'on' : ''}}" >
       <image src = "/assets/marquee_lottery2.png"/>
     </view>
 
@@ -20,19 +20,19 @@
       <image src = "/assets/marquee_btn.png"/>
     </view> 
 
-    <view class="marquee_item {{idx == 5 ? 'on' : ''}}" >
+    <view class="marquee_item {{idx == 4 ? 'on' : ''}}" >
       <image src = "/assets/marquee_lottery3.png"/>
     </view>
 
-    <view class="marquee_item {{idx == 6 ? 'on' : ''}}" >
+    <view class="marquee_item {{idx == 7 ? 'on' : ''}}" >
       <image src = "/assets/marquee_lottery1.png"/>
     </view>
 
-    <view class="marquee_item {{idx == 7 ? 'on' : ''}}" >
+    <view class="marquee_item {{idx == 6 ? 'on' : ''}}" >
       <image src = "/assets/marquee_lottery2.png"/>
     </view>
 
-    <view class="marquee_item {{idx == 8 ? 'on' : ''}}" >
+    <view class="marquee_item {{idx == 5 ? 'on' : ''}}" >
       <image src = "/assets/marquee_lottery1.png"/>
     </view>   
                
