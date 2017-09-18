@@ -5,11 +5,16 @@
 
 ## 支持营销类型
 
-- 大转盘（Rotate）
-- 刮刮乐 (scratch ticket)
-- 老虎机	（slot machine）
-- 跑马灯 （marquee）
-- 九宫格翻纸牌 (grid card)
+- 大转盘
+- 刮刮乐 
+- 老虎机	
+- 跑马灯 
+- 九宫格翻纸牌 
+- 摇一摇 
+- 手势解锁
+
+ ![支持营销](http://img.pfan123.com/wx_market_1.jpeg?imageView2/1/w/356/h/634)
+
 
 ## 如何使用
 
@@ -32,6 +37,8 @@ npm i
 - 老虎机	（slot machine） : `/pages/slotmachine/utils/`
 - 跑马灯 （marquee）: `/pages/marquee/utils/`
 - 九宫格翻纸牌 (grid card): `/pages/gridcard/utils/`
+- 摇一摇 (shake): `/pages/shake/utils/`
+- 手势解锁 (gesture lock): `/pages/gestureLock/utils/`
 
 4.使用引入方式
 
@@ -59,6 +66,9 @@ npm i
    })
  ```
 
+ ![大转盘组件](http://img.pfan123.com/wx_market_2.jpeg?imageView2/1/w/356/h/634)
+
+
 ➁使用刮刮乐组件
 
 - WXML中引用结构：`<import src="./utils/scratch.wxml"/>`
@@ -83,6 +93,8 @@ npm i
  ```
 
  `注意：`小程序无globalCompositeOperation = 'destination-out'属性，所以采用 `clearRect` 做擦除处理
+
+ ![刮刮乐组件](http://img.pfan123.com/wx_market_2.jpeg?imageView2/1/w/356/h/634) 
 
 ➂使用老虎机组件
 
@@ -113,6 +125,8 @@ npm i
    })
  ```
 
+  ![老虎机组件](http://img.pfan123.com/wx_market_2.jpeg?imageView2/1/w/356/h/634) 
+
 ➃使用跑马灯组件
 
 - WXSS中引用样式：`@import './utils/marquee.wxss'`
@@ -133,6 +147,8 @@ npm i
     }            
   })
  ```
+
+  ![跑马灯组件](http://img.pfan123.com/wx_market_2.jpeg?imageView2/1/w/356/h/634)  
 
 ➄使用九宫格翻纸牌组件
 
@@ -163,6 +179,8 @@ npm i
  })
  ```
 
+  ![九宫格翻纸组件](http://img.pfan123.com/wx_market_2.jpeg?imageView2/1/w/356/h/634)  
+
  ➅使用摇一摇组件
 
 - WXSS中引用样式：`@import './utils/shake.wxss'`
@@ -182,6 +200,8 @@ npm i
   })
  ```
 
+  ![摇一摇组件](http://img.pfan123.com/wx_market_2.jpeg?imageView2/1/w/356/h/634)   
+
  ➆使用手势解锁组件
 
  - WXSS中引用样式：`@import './utils/lock.wxss'`
@@ -200,6 +220,8 @@ npm i
    drawColor: '#3985ff'        
  })
  ```
+
+  ![手势解锁组件](http://img.pfan123.com/wx_market_2.jpeg?imageView2/1/w/356/h/634)    
 
 ## 组件预览
 
