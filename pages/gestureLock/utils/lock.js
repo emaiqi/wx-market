@@ -112,7 +112,7 @@ export default class Lock {
       let now = new Date()
       let duration = now - prev
       // 帧频率大于60丢弃
-      if (duration < Math.floor(1000 / LIMIT)) return
+      if (duration < Math.floor(1000 / LIMIT) || !this.touchFlag) return;
       prev = now
 
       if(this.touchFlag){
