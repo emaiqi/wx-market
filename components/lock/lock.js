@@ -126,10 +126,10 @@ export default class Lock {
           this.touchFlag = false
           this.storePass(this.lastPoint)
 
-          //300ms 重置
+          //300ms 重置，重置时间会影响lastPoint取值， 影响drawline报错
           setTimeout(() => {
               this.reset()
-          }, 1000);
+          }, 300)
       }
   }
 
@@ -145,7 +145,6 @@ export default class Lock {
   }
 
   update(po) { // 核心变换方法在touchmove时候调用
-      if( typeof po.x == 'undefined' || typeof po.y == 'undefined')return
       this.ctx.clearRect(0, 0, this.canvasWidth, this.canvasHeight)
       for (let i = 0 ; i < this.arr.length ; i++) { // 每帧先把面板画出来
           this.drawCle(this.arr[i].x, this.arr[i].y)
