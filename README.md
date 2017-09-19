@@ -34,8 +34,6 @@ git clone git@github.com:pfan123/wx-market.git
 
 ### 3.使用引入方式
 
-拷贝所需组件，到小程序目录 **/pages** 路由目录
-
 #### ➀ 使用大转盘组件
 
 - WXSS中引用样式：`@import '../../components/wheel/wheel.wxss'`
