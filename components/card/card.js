@@ -1,57 +1,38 @@
 /**
- * @description 九宫格翻纸盘组件逻辑部分
+ * Class representing a Card
+ * @class
+ * @classdesc 九宫格翻纸牌组件逻辑部分
  * @author pfan
+ * @todo 注意：移动端真机，不支持requestAnimationFrame.
  * 
- * 问题：
- * 移动端真机，不支持requestAnimationFrame
- *
- * * 调用方式：
- * 
- * 例如：import Card from "../../component/card/card.js"
- *
- *  wxss 文件需要引入 card.wxss
- * `@import '../../component/card/card.wxss'`
- * 
- * wxml 文件需要引入 card.wxml
- * 例如：<import src="../../component/card/card.wxml" />
- *      <template is = "card" data="{{card}}"></template> 
- * 
- * js 中调用
- * 
- *  this.card = new Card(this,{
+ * @example
+ *  new Card(this,{
  *    data: [   //宫格信息，内联样式、是否是反面、是否运动、对应奖项
- *      {inlineStyle: '', isBack: false, isMove: false, award: "一等奖"},    
- *      {inlineStyle: '', isBack: false, isMove: false, award: "二等奖"},
- *      {inlineStyle: '', isBack: false, isMove: false, award: "三等奖"},
- *      {inlineStyle: '', isBack: false, isMove: false, award: "四等奖"},
- *      {inlineStyle: '', isBack: false, isMove: false, award: "五等奖"},
- *      {inlineStyle: '', isBack: false, isMove: false, award: "六等奖"},
- *      {inlineStyle: '', isBack: false, isMove: false, award: "七等奖"},
- *      {inlineStyle: '', isBack: false, isMove: false, award: "八等奖"},
- *      {inlineStyle: '', isBack: false, isMove: false, award: "九等奖"}
+ *      {isBack: false, isMove: false, award: "一等奖"},    
+ *      {isBack: false, isMove: false, award: "二等奖"},
+ *      {isBack: false, isMove: false, award: "三等奖"},
+ *      {isBack: false, isMove: false, award: "四等奖"},
+ *      {isBack: false, isMove: false, award: "五等奖"},
+ *      {isBack: false, isMove: false, award: "六等奖"},
+ *      {isBack: false, isMove: false, award: "七等奖"},
+ *      {isBack: false, isMove: false, award: "八等奖"},
+ *      {isBack: false, isMove: false, award: "九等奖"}
  *    ],
  *    callback: (idx, award) => {
  *      //结束回调， 参数对应宫格索引，对应奖项    
  *    }
  *  })
  */
+class Card {
 
-
-
-/**
- * [runAsync 延迟返回promise]
- */
-function runAsync(time) {
-  return new Promise(function(resolve, reject) {
-    let timer = setTimeout(function(){
-      resolve()
-      clearTimeout(timer)
-    }, time)
-  })
-}
-
-
-export default class Card {
+  /**
+   * constructor Card构造函数
+   * @param  {Object} pageContext page路由指针
+   * @param  {String} opts.inlineStyle  组件所需参数
+   * @param  {String} opts  组件所需参数
+   * @param  {String} opts  组件所需参数
+   */
+  
   constructor (pageContext, opts) {
     this.page = pageContext
     this.isFlip = false
@@ -66,7 +47,7 @@ export default class Card {
      let {card} = this
      
      for(let i = 0; i < 9; i++){
-        card[i] = {inlineStyle: '', isBack: false, isMove: false, award: card[i].award}
+        card[i] = {isBack: false, isMove: false, award: card[i].award}
      }
      this.page.setData({card})
      this.card = card
@@ -124,7 +105,7 @@ export default class Card {
      let {card} = this
      this.isFlip = false
      for(let i = 0; i < 9; i++){
-        card[i] = {inlineStyle: '', isBack: false, isMove: false, award: card[i].award}
+        card[i] = {isBack: false, isMove: false, award: card[i].award}
      }     
      this.card = card
      this.page.setData({card})
@@ -149,3 +130,21 @@ export default class Card {
   }  
 
 }
+
+
+/**
+ * runAsync 延迟返回 promise 方法
+ * @param  {Number} time 延迟时间
+ * @return {type}   返回Promise对象
+ */
+function runAsync(time) {
+  return new Promise(function(resolve, reject) {
+    let timer = setTimeout(function(){
+      resolve()
+      clearTimeout(timer)
+    }, time)
+  })
+}
+
+
+export default Card

@@ -147,15 +147,15 @@ git clone git@github.com:pfan123/wx-market.git
 ```js 
  new Card(this,{
    data: [   //宫格信息，内联样式、是否是反面、是否运动、对应奖项
-     {inlineStyle: '', isBack: false, isMove: false, award: "一等奖"},    
-     {inlineStyle: '', isBack: false, isMove: false, award: "二等奖"},
-     {inlineStyle: '', isBack: false, isMove: false, award: "三等奖"},
-     {inlineStyle: '', isBack: false, isMove: false, award: "四等奖"},
-     {inlineStyle: '', isBack: false, isMove: false, award: "五等奖"},
-     {inlineStyle: '', isBack: false, isMove: false, award: "六等奖"},
-     {inlineStyle: '', isBack: false, isMove: false, award: "七等奖"},
-     {inlineStyle: '', isBack: false, isMove: false, award: "八等奖"},
-     {inlineStyle: '', isBack: false, isMove: false, award: "九等奖"}
+     {isBack: false, isMove: false, award: "一等奖"},    
+     {isBack: false, isMove: false, award: "二等奖"},
+     {isBack: false, isMove: false, award: "三等奖"},
+     {isBack: false, isMove: false, award: "四等奖"},
+     {isBack: false, isMove: false, award: "五等奖"},
+     {isBack: false, isMove: false, award: "六等奖"},
+     {isBack: false, isMove: false, award: "七等奖"},
+     {isBack: false, isMove: false, award: "八等奖"},
+     {isBack: false, isMove: false, award: "九等奖"}
    ],
    callback: (idx, award) => {
      //结束回调， 参数对应宫格索引，对应奖项    
