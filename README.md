@@ -47,7 +47,7 @@ git clone git@github.com:pfan123/wx-market.git
 - JS中实例调用：
 
 ```js
-   this.wheel = new Wheel(this, {
+   new Wheel(this, {
      areaNumber: 8,   //抽奖间隔
      speed: 16,       //转动速度
      awardNumer: 2,    //中奖区域从1开始
@@ -69,7 +69,7 @@ git clone git@github.com:pfan123/wx-market.git
 - JS中实例调用：
 
 ```js
-  this.scratch = new Scratch(this, {
+  new Scratch(this, {
     canvasWidth: 197,   //画布宽带
     canvasHeight: 72,  //画布高度
     imageResource: './images/placeholder.png', //画布背景
@@ -97,7 +97,7 @@ git clone git@github.com:pfan123/wx-market.git
 - JS中实例调用：
 
 ```js
-   this.slotMachine = new SlotMachine(this, {
+   new SlotMachine(this, {
      height: 40,  //单个数字高度
      len: 10,     //单个项目数字个数
      transY1: 0,
@@ -126,7 +126,7 @@ git clone git@github.com:pfan123/wx-market.git
 - JS中实例调用：
 
 ```js 
-  this.fruitMachine = new FruitMachine(this, {
+  new FruitMachine(this, {
     len: 9, //宫格个数
     ret: 9, //抽奖结果对应值1～9
     speed: 100,  // 速度值
@@ -176,7 +176,7 @@ git clone git@github.com:pfan123/wx-market.git
 - JS中实例调用：
 
 ```js 
-  this.shake = new Shake(this, {
+  new Shake(this, {
     shakeThreshold: 70, //阈值
     callback: () => {
           
@@ -195,7 +195,7 @@ git clone git@github.com:pfan123/wx-market.git
 - JS中实例调用：
 
 ```js 
- this.lock = new Lock(this, {
+ new Lock(this, {
    canvasWidth: 300,
    canvasHeight: 300,
    canvasId: 'canvasLock',
