@@ -44,16 +44,16 @@ npm i
 
 ➀使用大转盘组件
 
-- WXSS中引用样式：`@import '../../components/rotate/dial.wxss'`
+- WXSS中引用样式：`@import '../../components/wheel/wheel.wxss'`
 
-- WXML中引用结构：`<import src="../../components/rotate/dial.wxml"/>`
+- WXML中引用结构：`<import src="../../components/wheel/wheel.wxml"/>`
 
-- JS中引用：`import Dial from '../../components/rotate/dial.js'`
+- JS中引用：`import Dial from '../../components/wheel/wheel.js'`
 
 - JS中实例调用：
 
 ```js
-   let dial = new Dial(this, {
+   let wheel = new Wheel(this, {
      areaNumber: 8,   //抽奖间隔
      speed: 16,       //转动速度
      awardNumer: 2,    //中奖区域从1开始
