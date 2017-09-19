@@ -45,15 +45,15 @@ git clone git@github.com:pfan123/wx-market.git
 - JS中实例调用：
 
 ```js
-   new Wheel(this, {
-     areaNumber: 8,   //抽奖间隔
-     speed: 16,       //转动速度
-     awardNumer: 2,    //中奖区域从1开始
-     mode: 1,    //1是指针旋转，2为转盘旋转
-     callback: () => {
-       //运动停止回调  
-     }
-   })
+  new Wheel(this,{
+    areaNumber: 8,   //抽奖间隔
+    speed: 16,       //转动速度
+    awardNumer: 2,   //中奖区域从1开始
+    mode: 1,         //1是指针旋转，2为转盘旋转
+    callback: (idx, award) => {
+      //结束回调， 参数对应宫格索引，对应奖项    
+    }
+  })
 ```
 
 
@@ -67,14 +67,15 @@ git clone git@github.com:pfan123/wx-market.git
 - JS中实例调用：
 
 ```js
-  new Scratch(this, {
+  new Scratch(this,{
     canvasWidth: 197,   //画布宽带
     canvasHeight: 72,  //画布高度
-    imageResource: './images/placeholder.png', //画布背景
+    imageResource: './images/placeholder.png', //遮罩层图片
     r: 4, //笔触半径
-    awardTxt: '中大奖', //底部抽奖文字
-    awardTxtColor: "#1AAD16", //画布颜色
-    awardTxtFontSize: "24px", //文字字体大小
+    awardTxt: '中大奖', //底部抽奖文字奖项
+    awardTxtColor: "#1AAD16", //底部抽奖文字颜色
+    awardTxtFontSize: "24px", //底部抽奖文字大小
+    maskColor: "red",  //没有图片遮罩层颜色
     callback: () => {
       //清除画布回调
     }
@@ -90,27 +91,27 @@ git clone git@github.com:pfan123/wx-market.git
 
 - WXML中引用结构：`<import src="../../components/slotMachine/slotMachine.wxml"/>`
 
-- JS中引用：`import slotMachine from '../../components/slotMachine/slotMachine.js'`
+- JS中引用：`import SlotMachine from '../../components/slotMachine/slotMachine.js'`
 
 - JS中实例调用：
 
 ```js
-   new SlotMachine(this, {
+  new SlotMachine(this,{
      height: 40,  //单个数字高度
      len: 10,     //单个项目数字个数
-     transY1: 0,
-     num1: 3,    //结束数字
-     transY2: 0,
-     num2: 0,    //结束数字
-     transY3: 0,
-     num3: 0,  //结束数字
-     transY4: 0,
-     num4: 1,  //结束数字
-     speed: 24,  //速度
-     callback: () => {
-         //停止时回调        
-     }      
-   })
+     transY1: 0,  //第一列初始位置
+     num1: 3,     //第一列结束数字
+     transY2: 0,  //第二列初始位置
+     num2: 0,     //第二列结束数字
+     transY3: 0,  //第三列初始位置
+     num3: 0,     //第三列结束数字
+     transY4: 0,  //第四列结束数字
+     num4: 1,     //第四列结束数字
+     speed: 24,   //速度
+     callback: (idx, award) => {
+      //结束回调， 参数对应宫格索引，对应奖项    
+    }
+  })
 ```
 
 #### ➃ 使用水果机组件
@@ -119,18 +120,18 @@ git clone git@github.com:pfan123/wx-market.git
 
 - WXML中引用结构：`<import src="../../components/fruitMachine/fruitMachine.wxml"/>`
 
-- JS中引用：`import fruitMachine from '../../components/fruitMachine/fruitMachine.js'`
+- JS中引用：`import FruitMachine from '../../components/fruitMachine/fruitMachine.js'`
 
 - JS中实例调用：
 
 ```js 
-  new FruitMachine(this, {
+  new FruitMachine(this,{
     len: 9, //宫格个数
-    ret: 9, //抽奖结果对应值1～9
+    ret: 9, //抽奖结果对应值1～9   
     speed: 100,  // 速度值
-    callback: () => {
-      //结束回调    
-    }            
+    callback: (idx, award) => {
+      //结束回调， 参数对应宫格索引，对应奖项    
+    }
   })
 ``` 
 
@@ -145,22 +146,22 @@ git clone git@github.com:pfan123/wx-market.git
 - JS中实例调用：
 
 ```js 
- new Card(this,{
-   data: [   //宫格信息，内联样式、是否是反面、是否运动、对应奖项
-     {isBack: false, isMove: false, award: "一等奖"},    
-     {isBack: false, isMove: false, award: "二等奖"},
-     {isBack: false, isMove: false, award: "三等奖"},
-     {isBack: false, isMove: false, award: "四等奖"},
-     {isBack: false, isMove: false, award: "五等奖"},
-     {isBack: false, isMove: false, award: "六等奖"},
-     {isBack: false, isMove: false, award: "七等奖"},
-     {isBack: false, isMove: false, award: "八等奖"},
-     {isBack: false, isMove: false, award: "九等奖"}
-   ],
-   callback: (idx, award) => {
-     //结束回调， 参数对应宫格索引，对应奖项    
-   }
- })
+  new Card(this,{
+    data: [   //宫格信息，内联样式、是否是反面、是否运动、对应奖项
+      {isBack: false, isMove: false, award: "一等奖"},    
+      {isBack: false, isMove: false, award: "二等奖"},
+      {isBack: false, isMove: false, award: "三等奖"},
+      {isBack: false, isMove: false, award: "四等奖"},
+      {isBack: false, isMove: false, award: "五等奖"},
+      {isBack: false, isMove: false, award: "六等奖"},
+      {isBack: false, isMove: false, award: "七等奖"},
+      {isBack: false, isMove: false, award: "八等奖"},
+      {isBack: false, isMove: false, award: "九等奖"}
+    ],
+    callback: (idx, award) => {
+      //结束回调， 参数对应宫格索引，对应奖项    
+    }
+  })
 ```
 
 #### ➅ 使用摇一摇组件
@@ -174,11 +175,11 @@ git clone git@github.com:pfan123/wx-market.git
 - JS中实例调用：
 
 ```js 
-  new Shake(this, {
+  new Shake(this,{
     shakeThreshold: 70, //阈值
-    callback: () => {
-          
-    }            
+    callback: (idx, award) => {
+      //结束回调， 参数对应宫格索引，对应奖项    
+    }
   })
 ```
 
@@ -193,12 +194,12 @@ git clone git@github.com:pfan123/wx-market.git
 - JS中实例调用：
 
 ```js 
- new Lock(this, {
-   canvasWidth: 300,
-   canvasHeight: 300,
-   canvasId: 'canvasLock',
-   drawColor: '#3985ff'        
- })
+  new Lock(this,{
+    canvasWidth: 300,   //canvas画布宽度 px
+    canvasHeight: 300,  //canvas画布高度 px 
+    canvasId: 'canvasLock', //canvas画布id
+    drawColor: '#3985ff'  //绘制颜色
+  })
 ```   
 
 ## 效果图展示
