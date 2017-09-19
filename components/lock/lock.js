@@ -1,36 +1,31 @@
-/**
- * @description 手势解锁组件逻辑部分 参考 https://github.com/getweapp/weapp-gesture-lock
- * @author pfan
- * * 调用方式：
- * 
- * 例如：import Shake from "../../components/lock/lock.js"
- * 
- * wxss 文件需要引入 lock.wxss
- * `@import '../../components/lock/lock.wxss'`
- * 
- * wxml 文件需要引入 lock.wxml
- * 例如：<import src="../../components/lock/lock.wxml" />
- *      <template is = "lock" data="{{anim}}"></template> 
- * 
- * js 中调用
- * 
- *  this.lock = new Lock(this, {
- *    canvasWidth: 300,
- *    canvasHeight: 300,
- *    canvasId: 'canvasLock',
- *    drawColor: '#3985ff'        
- *  })
-
- */
-
-function getDis(a, b) {
-    return Math.sqrt(Math.pow(a.x - b.x, 2) + Math.pow(a.y - b.y, 2));
-}
-
 const LIMIT = 60
 let prev = 0
 
-export default class Lock {
+/**
+ * Class Lock
+ * @class
+ * @classdesc 手势解锁组件逻辑部分
+ * @author pfan
+ * 
+ * @example
+ *  new Lock(this,{
+ *    canvasWidth: 300,   //canvas画布宽度 px
+ *    canvasHeight: 300,  //canvas画布高度 px 
+ *    canvasId: 'canvasLock', //canvas画布id
+ *    drawColor: '#3985ff'  //绘制颜色
+ *  })
+ */
+class Lock {
+
+  /**
+   * @constructs Lock构造函数
+   * @param  {Object} pageContext page路由指针
+   * @param  {Object} opts      组件所需参数
+   * @param  {Number} opts.canvasWidth  canvas画布宽度 px
+   * @param  {Number} opts.canvasHeight  canvas画布高度 px
+   * @param  {String} opts.canvasId  canvas画布id
+   * @param  {String} opts.drawColor    绘制颜色
+   */  
   constructor (pageContext, opts) {
     this.page = pageContext
     this.canvasWidth = opts.canvasWidth || 300
@@ -304,3 +299,16 @@ export default class Lock {
   }
 
 }
+
+
+/**
+ * getDis 获取两点直线距离
+ * @param  {Object} a 坐标
+ * @param  {Object} b 坐标
+ * @return {Number}   距离值
+ */
+function getDis(a, b) {
+    return Math.sqrt(Math.pow(a.x - b.x, 2) + Math.pow(a.y - b.y, 2));
+}
+
+export default Lock

@@ -1,41 +1,45 @@
 /**
- * @description 老虎机游戏逻辑部分
+ * Class Machine
+ * @class
+ * @classdesc 老虎机游戏逻辑部分
  * @author pfan
  * 
-  * * 调用方式：
- * 
- * 例如：import SlotMachine from "../../components/slotMachine/slotMachine.js"
- *
- *  wxss 文件需要引入 slotMachine.wxss
- * `@import '../../components/slotMachine/slotMachine.wxss'`
- * 
- * wxml 文件需要引入 slotMachine.wxml
- * 例如：<import src="../../components/slotMachine/slotMachine.wxml" />
- *      <template is = "slotMachine" data="{{...machine}}"></template> 
- * 
- * js 中调用
- * 
- *   this.slotMachine = new SlotMachine(this, {
+ * @example
+ *  new Machine(this,{
  *     height: 40,  //单个数字高度
  *     len: 10,     //单个项目数字个数
- *     transY1: 0,
- *     num1: 3,    //结束数字
- *     transY2: 0,
- *     num2: 0,    //结束数字
- *     transY3: 0,
- *     num3: 0,  //结束数字
- *     transY4: 0,
- *     num4: 1,  //结束数字
- *     speed: 24,  //速度
- *     callback: () => {
- *         //停止时回调        
- *     }      
- *   })
+ *     transY1: 0,  //第一列初始位置
+ *     num1: 3,     //第一列结束数字
+ *     transY2: 0,  //第二列初始位置
+ *     num2: 0,     //第二列结束数字
+ *     transY3: 0,  //第三列初始位置
+ *     num3: 0,     //第三列结束数字
+ *     transY4: 0,  //第四列结束数字
+ *     num4: 1,     //第四列结束数字
+ *     speed: 24,   //速度
+ *     callback: (idx, award) => {
+ *      //结束回调， 参数对应宫格索引，对应奖项    
+ *    }
+ *  })
  */
-
-
-
-export default class Machine {
+class Machine {
+  /**
+   * @constructs Machine构造函数
+   * @param  {Object} pageContext page路由指针
+   * @param  {Object} opts      组件所需参数
+   * @param  {Number} opts.height  单个数字高度
+   * @param  {Number} opts.len  单个项目数字个数
+   * @param  {Number} opts.transY1  第一列初始位置
+   * @param  {Number} opts.num1     第一列结束数字
+   * @param  {Number} opts.transY2  第二列初始位置
+   * @param  {Number} opts.num2     第二列结束数字
+   * @param  {Number} opts.transY3  第三列初始位置
+   * @param  {Number} opts.num3     第三列结束数字
+   * @param  {Number} opts.transY4  第四列初始位置
+   * @param  {Number} opts.num4     第四列结束数字
+   * @param  {Number} opts.speed    速度
+   * @param  {Function} opts.callback    结束回调
+   */  
   constructor (pageContext, opts) {
     this.page = pageContext
     this.height = opts.height
@@ -200,3 +204,5 @@ export default class Machine {
 
 }
 
+
+export default Machine

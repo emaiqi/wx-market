@@ -1,33 +1,31 @@
 /**
- * @description 跑马灯游戏逻辑部分
+ * Class FruitMachine
+ * @class
+ * @classdesc 水果机游戏逻辑部分
  * @author pfan
- * * 调用方式：
  * 
- * 例如：import Marquee from "../../components/fruitMachine/fruitMachine.js"
- * 
- * wxss 文件需要引入 fruitMachine.wxss
- * `@import '../../components/fruitMachine/fruitMachine.wxss'`
- * 
- * wxml 文件需要引入 fruitMachine.wxml
- * 例如：<import src="../../components/fruitMachine/fruitMachine.wxml" />
- *      <template is = "fruitMachine" data="{{...machine}}"></template> 
- * 
- * js 中调用
- * 
- *  this.fruitMachine = new FruitMachine(this, {
+ * @example
+ *  new FruitMachine(this,{
  *    len: 9, //宫格个数
- *    ret: 9, //抽奖结果对应值1～9
- *    speed: 100,  // 速度值
- *    callback: () => {
- *      //结束回调    
- *    }            
+ *    ret: 9, //抽奖结果对应值1～9   
+ *    speed: 100  // 速度值
+ *    ],
+ *    callback: (idx, award) => {
+ *      //结束回调， 参数对应宫格索引，对应奖项    
+ *    }
  *  })
-
  */
+ class FruitMachine {
 
-
-
-export default class FruitMachine {
+  /**
+   * @constructs FruitMachine构造函数
+   * @param  {Object} pageContext page路由指针
+   * @param  {Object} opts      组件所需参数
+   * @param  {Number} opts.len  宫格个数
+   * @param  {Number} opts.ret  抽奖结果对应值1～9
+   * @param  {Number} opts.speed  速度值
+   * @param  {Function} opts.callback  结束回调
+   */  
   constructor (pageContext, opts) {
     this.page = pageContext
     this.len = opts.len || 8
@@ -78,3 +76,5 @@ export default class FruitMachine {
   }
 
 }
+
+export default FruitMachine

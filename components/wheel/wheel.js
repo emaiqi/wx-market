@@ -1,35 +1,32 @@
 /**
- * @description 大转盘游戏逻辑部分
+ * Class Wheel
+ * @class
+ * @classdesc 大转盘游戏逻辑部分
  * @author pfan
+ * @todo 注意：移动端真机，不支持requestAnimationFrame.
  * 
- * 问题：
- * 移动端真机，不支持requestAnimationFrame
- *
- * * 调用方式：
- * 
- * 例如：import Wheel from "../../components/wheel/wheel.js"
- * 
- *  wxss 文件需要引入 wheel.wxss
- * `@import '../../components/wheel/wheel.wxss'`
- * 
- * wxml 文件需要引入 wheel.wxml
- * 例如：<import src="../../components/wheel/wheel.wxml" />
- *      <template is = "wheel" data="{{...wheel}}"></template> 
- * 
- * js 中调用
- * 
- *  this.wheel = new Wheel(this, {
+ * @example
+ *  new Wheel(this,{
  *    areaNumber: 8,   //抽奖间隔
  *    speed: 16,       //转动速度
- *    awardNumer: 2,    //中奖区域从1开始
- *    mode: 1,    //1是指针旋转，2为转盘旋转
- *    callback: () => {
- *      //运动停止回调  
+ *    awardNumer: 2,   //中奖区域从1开始
+ *    mode: 1,         //1是指针旋转，2为转盘旋转
+ *    callback: (idx, award) => {
+ *      //结束回调， 参数对应宫格索引，对应奖项    
  *    }
  *  })
  */
-
-export default class Wheel {
+class Wheel {
+  /**
+   * @constructs Wheel构造函数
+   * @param  {Object} pageContext page路由指针
+   * @param  {Object} opts      组件所需参数
+   * @param  {Number} opts.areaNumber  抽奖间隔
+   * @param  {Number} opts.speed       转动速度
+   * @param  {Number} opts.awardNumer  中奖区域从1开始
+   * @param  {Number} opts.mode     1是指针旋转，2为转盘旋转
+   * @param  {Function} opts.callback    结束回调
+   */  
   constructor (pageContext, opts) {
     this.page = pageContext
     this.deg = 0 
@@ -110,4 +107,6 @@ export default class Wheel {
   }
 
 }
+
+export default Wheel
 

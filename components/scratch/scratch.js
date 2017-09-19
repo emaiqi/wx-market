@@ -1,42 +1,44 @@
 /**
- * @description 刮刮乐游戏逻辑部分
+ * Class Scratch
+ * @class
+ * @classdesc 九宫格翻纸牌组件逻辑部分
  * @author pfan
+ * @todo 1.drawImage 与 clearRect 清除展示移动端和模拟器不一致
+ * @todo 2.小程序无globalCompositeOperation = 'destination-out'属性
+ * @todo 3.小程序无getImageData获取像素点对比擦除范围
+ * @todo 4.使用 downloadFile 这种方式来先加载图片再绘制
  * 
- * 问题：
- * 1.drawImage 与 clearRect 清除展示移动端和模拟器不一致
- * 2.小程序无globalCompositeOperation = 'destination-out'属性
- * 3.小程序无getImageData获取像素点对比擦除范围
- * 4.小程序canvas绘制图片，真机要正常展示需要使用https协议的图片， http或相对路径微信小程序工具可以展示
- * 遗留问题：图片画的问题
- *使用 downloadFile 这种方式来先加载图片再绘制
- *
-  * * 调用方式：
- * 
- * 例如：import Scratch from "../../components/scratch/scratch.js"
- * 
- * wxml 文件需要引入 scratch.wxml
- * 例如：<import src="../../components/scratch/scratch.wxml" />
- *      <template is = "scratch" data = "{{scratch, isScroll}}"></template> 
- * 
- * js 中调用
- *   maskColor 和 imageResource 都存在时，优先绘制图片
- *  this.scratch = new Scratch(this, {
+ * @example
+ *  new Scratch(this,{
  *    canvasWidth: 197,   //画布宽带
  *    canvasHeight: 72,  //画布高度
- *    imageResource: './images/placeholder.png', //画布背景
+ *    imageResource: './images/placeholder.png', //遮罩层图片
  *    r: 4, //笔触半径
- *    awardTxt: '中大奖', //底部抽奖文字
- *    awardTxtColor: "#1AAD16", //画布颜色
- *    awardTxtFontSize: "24px", //文字字体大小
- *    maskColor: "red",
+ *    awardTxt: '中大奖', //底部抽奖文字奖项
+ *    awardTxtColor: "#1AAD16", //底部抽奖文字颜色
+ *    awardTxtFontSize: "24px", //底部抽奖文字大小
+ *    maskColor: "red",  //没有图片遮罩层颜色
  *    callback: () => {
  *      //清除画布回调
  *    }
  *  })
  */
+class Scratch {
 
-
-export default class Scratch {
+  /**
+   * @constructs Scratch构造函数
+   * @param  {Object} pageContext page路由指针
+   * @param  {Object} opts      组件所需参数
+   * @param  {Number} opts.canvasWidth  画布宽带
+   * @param  {Number} opts.canvasHeight  画布高度
+   * @param  {String} opts.imageResource  遮罩层图片
+   * @param  {Number} opts.r    笔触半径
+   * @param  {String} opts.awardTxt    底部抽奖文字奖项
+   * @param  {String} opts.awardTxtColor    底部抽奖文字颜色
+   * @param  {String} opts.awardTxtFontSize    底部抽奖文字大小
+   * @param  {String} opts.maskColor     没有图片遮罩层颜色
+   * @param  {Function} opts.callback    结束回调
+   */
   constructor (pageContext, opts) {
     this.page = pageContext
     this.canvasWidth = opts.canvasWidth
@@ -173,3 +175,4 @@ export default class Scratch {
   }   
 }
 
+export default Scratch

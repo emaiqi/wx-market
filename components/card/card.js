@@ -1,5 +1,5 @@
 /**
- * Class representing a Card
+ * Class Card
  * @class
  * @classdesc 九宫格翻纸牌组件逻辑部分
  * @author pfan
@@ -26,11 +26,14 @@
 class Card {
 
   /**
-   * constructor Card构造函数
+   * @constructs Card构造函数
    * @param  {Object} pageContext page路由指针
+   * @param  {Object} opts      组件所需参数
    * @param  {String} opts.inlineStyle  组件所需参数
-   * @param  {String} opts  组件所需参数
-   * @param  {String} opts  组件所需参数
+   * @param  {Boolean} opts.isBack  是否是反面
+   * @param  {Boolean} opts.isMove  是否运动
+   * @param  {String} opts.award    对应奖项
+   * @param  {Function} opts.callback    结束回调
    */
   
   constructor (pageContext, opts) {
@@ -123,7 +126,6 @@ class Card {
     let award = event.currentTarget.dataset.award
     card[idx].isBack = !card[idx].isBack
     this.page.setData({card})
-    console.log("award", award)
     runAsync(600).then( () => {
       endCallBack(idx, award)
     })
