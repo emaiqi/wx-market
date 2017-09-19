@@ -30,7 +30,7 @@ npm i
 
 3.查看组件文件
 
-- 大转盘（Rotate）: `/components/rotate/`
+- 大转盘（Rotate）: `/components/dial/`
 - 刮刮乐 (scratch ticket) : `/components/scratch/`
 - 老虎机	（slot machine） : `/components/machine/`
 - 跑马灯 （marquee）: `/components/marquee/`
