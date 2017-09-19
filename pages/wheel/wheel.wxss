@@ -1,4 +1,4 @@
-@import '../../components/dial/dial.wxss'
+@import '../../components/wheel/wheel.wxss'
 .index-hd {
   padding: 80rpx;
   text-align: center;

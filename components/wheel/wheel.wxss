@@ -1,16 +1,16 @@
 
-.dial_wp{
+.wheel_wp{
   width: 500rpx;
   height: 500rpx;
   position: relative;
   margin: 0 auto;
 }
-.dial_wp image{
+.wheel_wp image{
   display: block;
   width: 100%;
   height: 100%;
 }
-.dial_wp .dial_pointer{
+.wheel_wp .wheel_pointer{
   position: absolute;
   width: 150rpx;
   height: 150rpx;
@@ -19,7 +19,7 @@
   margin: -75rpx 0 0 -75rpx;
   transform-origin: 50% 50%;
 }
-.dial_wp .dial_pointer image{
+.wheel_wp .wheel_pointer image{
   position: absolute;
   width: 150rpx;
   height: 238rpx;

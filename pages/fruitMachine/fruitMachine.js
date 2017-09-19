@@ -1,4 +1,4 @@
-import Marquee from "../../components/marquee/marquee.js"
+import FruitMachine from "../../components/fruitMachine/fruitMachine.js"
 
 Page({
   data: {
@@ -6,7 +6,7 @@ Page({
   },
 
   onLoad () {
-    this.marquee = new Marquee(this, {
+    this.fruitMachine = new FruitMachine(this, {
       ret: 8, //取值1～8
       speed: 100,
       callback: () => {
@@ -15,7 +15,7 @@ Page({
           content: '恭喜您，中奖了',
           showCancel: false,
           success: (res) => {
-            this.marquee.reset()
+            this.fruitMachine.reset()
             if (res.confirm) {
               console.log('用户点击确定')
             } else if (res.cancel) {

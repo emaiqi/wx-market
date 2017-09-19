@@ -1,4 +1,4 @@
-<template name="marquee" >
+<template name="fruitMachine" >
   <view class="marquee_wp">
     <view class="marquee_item {{idx == 1 ? 'on' : ''}}" >
       <image src = "/assets/marquee_lottery1.png"/>

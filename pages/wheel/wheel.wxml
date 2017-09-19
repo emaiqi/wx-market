@@ -1,4 +1,4 @@
-<import src="../../components/dial/dial.wxml" />
+<import src="../../components/wheel/wheel.wxml" />
 
 <view class="index">
   <view class="index-hd">
@@ -11,7 +11,7 @@
   	<view class="index-mod-btn {{mode == 2 ? 'on' : ''}}" bindtap = "onSwitchMode" data-mode="2">大转盘旋转</view>  
   </view>   
 
-  <template is = "dial" data="{{...dial}}"></template> 
+  <template is = "wheel" data="{{...wheel}}"></template> 
   <view class="index-tip">tip: 点击开始抽奖</view>  
 
 

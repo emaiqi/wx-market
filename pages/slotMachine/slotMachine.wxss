@@ -1,4 +1,4 @@
-@import '../../components/marquee/marquee.wxss'
+@import '../../components/slotMachine/slotMachine.wxss'
 
 .index-hd {
   padding: 80rpx;
@@ -12,13 +12,12 @@
   font-size: 28rpx;
 }
 
-button{
-  margin-top: 40rpx;
-  width: 400rpx;
+.index-tip{
+  color: #888;
+  font-size: 28rpx;
+  text-align: center;
+  margin: 20rpx 0;
 }
-
-
-
 
 button{
   margin-top: 40rpx;

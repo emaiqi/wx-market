@@ -1,10 +1,10 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/rotate/rotate",
+    "pages/wheel/wheel",
     "pages/scratch/scratch",
-    "pages/slotmachine/machine",
-    "pages/marquee/marquee",
+    "pages/slotMachine/slotMachine",
+    "pages/fruitMachine/fruitMachine",
     "pages/gridcard/gridcard",
     "pages/shake/shake",
     "pages/gestureLock/gestureLock"

@@ -1,4 +1,4 @@
-<template name="machine" >
+<template name="slotMachine" >
   <view class="machine_wp">
       <view class="machine_item_wp">
         <view class="machine_item_slide" style="transform: translateY({{transY1}}px);-webkit-transform: translateY({{transY1}}px)">

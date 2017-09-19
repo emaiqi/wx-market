@@ -1,4 +1,4 @@
-import Dial from "../../components/dial/dial.js"
+import Wheel from "../../components/wheel/wheel.js"
 
 Page({
   data: {
@@ -7,7 +7,7 @@ Page({
 
   onLoad () {
     let self = this
-    this.dial = new Dial(this, {
+    this.wheel = new Wheel(this, {
       areaNumber: 8,
       speed: 16,
       awardNumer: 1,
@@ -18,7 +18,7 @@ Page({
           content: '恭喜您，中奖了',
           showCancel: false,
           success: (res) => {
-            self.dial.reset()
+            self.wheel.reset()
             if (res.confirm) {
               console.log('用户点击确定')
             } else if (res.cancel) {
@@ -38,7 +38,7 @@ Page({
   onSwitchMode (event) {
     let mode = event.currentTarget.dataset.mode
     this.setData({mode})
-    this.dial.switch(mode)
+    this.wheel.switch(mode)
   }  
 
 })

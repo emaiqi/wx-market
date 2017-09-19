@@ -4,18 +4,18 @@
  * 
   * * 调用方式：
  * 
- * 例如：import Machine from "../../components/machine/machine.js"
+ * 例如：import SlotMachine from "../../components/slotMachine/slotMachine.js"
  *
- *  wxss 文件需要引入 machine.wxss
- * `@import '../../components/machine/machine.wxss'`
+ *  wxss 文件需要引入 slotMachine.wxss
+ * `@import '../../components/slotMachine/slotMachine.wxss'`
  * 
- * wxml 文件需要引入 machine.wxml
- * 例如：<import src="../../components/machine/machine.wxml" />
- *      <template is = "machine" data="{{...machine}}"></template> 
+ * wxml 文件需要引入 slotMachine.wxml
+ * 例如：<import src="../../components/slotMachine/slotMachine.wxml" />
+ *      <template is = "slotMachine" data="{{...machine}}"></template> 
  * 
  * js 中调用
  * 
- *   this.machine = new Machine(this, {
+ *   this.slotMachine = new SlotMachine(this, {
  *     height: 40,  //单个数字高度
  *     len: 10,     //单个项目数字个数
  *     transY1: 0,

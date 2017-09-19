@@ -2,8 +2,8 @@ Page({
   data: {
     list: [
       {
-        id: 'rotate',
-        sub: 'rotate',
+        id: 'wheel',
+        sub: 'wheel',
         name: '大转盘'
       }, 
       {
@@ -12,13 +12,13 @@ Page({
         name: '刮刮乐'
       }, 
       {
-        id: 'slotmachine',
-        sub: 'machine',
+        id: 'slotMachine',
+        sub: 'slotMachine',
         name: '老虎机'
       }, 
       {
-        id: 'marquee',
-        sub: 'marquee',
+        id: 'fruitMachine',
+        sub: 'fruitMachine',
         name: '跑马灯'
       }, 
       {

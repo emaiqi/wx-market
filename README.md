@@ -30,13 +30,13 @@ npm i
 
 3.查看组件文件
 
-- 大转盘（Rotate）: `/components/dial/`
-- 刮刮乐 (scratch ticket) : `/components/scratch/`
-- 老虎机	（slot machine） : `/components/machine/`
-- 跑马灯 （marquee）: `/components/marquee/`
-- 九宫格翻纸牌 (grid card): `/components/card/`
-- 摇一摇 (shake): `/components/shake/`
-- 手势解锁 (gesture lock): `/components/lock/`
+- 大转盘（Big wheel）: `/components/wheel/`
+- 刮刮乐 (Scratch tickets) : `/components/scratch/`
+- 老虎机	（Slot machine） : `/components/slotMachine/`
+- 跑马灯 （Fruit machine）: `/components/fruitMachine/`
+- 九宫格翻纸牌 (Grid card): `/components/card/`
+- 摇一摇 (Shake): `/components/shake/`
+- 手势解锁 (Gesture lock): `/components/lock/`
 
 4.使用引入方式
 
@@ -92,16 +92,16 @@ npm i
 
 ➂使用老虎机组件
 
-- WXSS中引用样式：`@import '../../components/machine/machine.wxss'`
+- WXSS中引用样式：`@import '../../components/slotMachine/slotMachine.wxss'`
 
-- WXML中引用结构：`<import src="../../components/machine/machine.wxml"/>`
+- WXML中引用结构：`<import src="../../components/slotMachine/slotMachine.wxml"/>`
 
-- JS中引用：`import Machine from '../../components/machine/machine.js'`
+- JS中引用：`import slotMachine from '../../components/slotMachine/slotMachine.js'`
 
 - JS中实例调用：
 
 ```js
-   this.machine = new Machine(this, {
+   this.slotMachine = new SlotMachine(this, {
      height: 40,  //单个数字高度
      len: 10,     //单个项目数字个数
      transY1: 0,
@@ -121,16 +121,16 @@ npm i
 
 ➃使用跑马灯组件
 
-- WXSS中引用样式：`@import '../../components/marquee/marquee.wxss'`
+- WXSS中引用样式：`@import '../../components/fruitMachine/fruitMachine.wxss'`
 
-- WXML中引用结构：`<import src="../../components/marquee/marquee.wxml"/>`
+- WXML中引用结构：`<import src="../../components/fruitMachine/fruitMachine.wxml"/>`
 
-- JS中引用：`import Marquee from '../../components/marquee/marquee.js'`
+- JS中引用：`import fruitMachine from '../../components/fruitMachine/fruitMachine.js'`
 
 - JS中实例调用：
 
 ```js 
-  this.marquee = new Marquee(this, {
+  this.fruitMachine = new FruitMachine(this, {
     len: 9, //宫格个数
     ret: 9, //抽奖结果对应值1～9
     speed: 100,  // 速度值

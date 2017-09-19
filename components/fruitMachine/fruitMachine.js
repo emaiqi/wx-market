@@ -3,18 +3,18 @@
  * @author pfan
  * * 调用方式：
  * 
- * 例如：import Marquee from "../../components/marquee/marquee.js"
+ * 例如：import Marquee from "../../components/fruitMachine/fruitMachine.js"
  * 
- * wxss 文件需要引入 marquee.wxss
- * `@import '../../components/marquee/marquee.wxss'`
+ * wxss 文件需要引入 fruitMachine.wxss
+ * `@import '../../components/fruitMachine/fruitMachine.wxss'`
  * 
- * wxml 文件需要引入 marquee.wxml
- * 例如：<import src="../../components/marquee/marquee.wxml" />
- *      <template is = "marquee" data="{{...marquee}}"></template> 
+ * wxml 文件需要引入 fruitMachine.wxml
+ * 例如：<import src="../../components/fruitMachine/fruitMachine.wxml" />
+ *      <template is = "fruitMachine" data="{{...machine}}"></template> 
  * 
  * js 中调用
  * 
- *  this.marquee = new Marquee(this, {
+ *  this.fruitMachine = new FruitMachine(this, {
  *    len: 9, //宫格个数
  *    ret: 9, //抽奖结果对应值1～9
  *    speed: 100,  // 速度值
@@ -27,7 +27,7 @@
 
 
 
-export default class Marquee {
+export default class FruitMachine {
   constructor (pageContext, opts) {
     this.page = pageContext
     this.len = opts.len || 8
@@ -60,7 +60,7 @@ export default class Marquee {
         }
 
         self.page.setData({
-          marquee: {
+          machine: {
             idx: count % 8  == 0 ? 8 : count % 8
           }
         })
@@ -71,7 +71,7 @@ export default class Marquee {
 
   reset () {
      this.page.setData({
-      marquee: {
+      machine: {
         idx: ''
       }
     })   

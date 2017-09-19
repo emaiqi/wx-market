@@ -1,4 +1,4 @@
-<import src="../../components/machine/machine.wxml" />
+<import src="../../components/slotMachine/slotMachine.wxml" />
 
 <view class="index">
   <view class="index-hd">
@@ -6,6 +6,6 @@
   </view>
 
 
- <template is = "machine" data="{{...machine}}"></template> 
+ <template is = "slotMachine" data="{{...machine}}"></template> 
  <button bindtap = "onStart">开始抽奖</button> 
 </view>

@@ -7,18 +7,18 @@
  *
  * * 调用方式：
  * 
- * 例如：import Dial from "../../components/rotate/dial.js"
+ * 例如：import Wheel from "../../components/wheel/wheel.js"
  * 
- *  wxss 文件需要引入 dial.wxss
- * `@import '../../components/rotate/dial.wxss'`
+ *  wxss 文件需要引入 wheel.wxss
+ * `@import '../../components/wheel/wheel.wxss'`
  * 
- * wxml 文件需要引入 dial.wxml
- * 例如：<import src="../../components/rotate/dial.wxml" />
- *      <template is = "dial" data="{{...dial}}"></template> 
+ * wxml 文件需要引入 wheel.wxml
+ * 例如：<import src="../../components/wheel/wheel.wxml" />
+ *      <template is = "wheel" data="{{...wheel}}"></template> 
  * 
  * js 中调用
  * 
- *  let dial = new Dial(this, {
+ *  let wheel = new Wheel(this, {
  *    areaNumber: 8,   //抽奖间隔
  *    speed: 16,       //转动速度
  *    awardNumer: 2,    //中奖区域从1开始
@@ -29,7 +29,7 @@
  *  })
  */
 
-export default class Dial {
+export default class Wheel {
   constructor (pageContext, opts) {
     this.page = pageContext
     this.deg = 0 
@@ -52,7 +52,7 @@ export default class Dial {
     singleAngle = 360 / areaNumber
     this.singleAngle = singleAngle
     this.page.setData({
-      dial: {
+      wheel: {
         singleAngle: singleAngle,
         mode: mode
       }
@@ -84,7 +84,7 @@ export default class Dial {
       }
       
       this.page.setData({
-        dial: {
+        wheel: {
           singleAngle: singleAngle,
           deg: deg,
           mode: mode
@@ -97,7 +97,7 @@ export default class Dial {
     let {mode} = this
     this.deg = 0
     this.page.setData({
-      dial: {
+      wheel: {
         singleAngle: this.singleAngle,
         deg: 0,
         mode: mode

@@ -1,4 +1,4 @@
-import Machine from "../../components/machine/machine.js"
+import SlotMachine from "../../components/slotMachine/slotMachine.js"
 
 Page({
   data: {
@@ -6,7 +6,7 @@ Page({
   },
 
   onLoad () {
-    this.machine = new Machine(this, {
+    this.slotMachine = new SlotMachine(this, {
       height: 40,  //单个数字高度
       len: 10,     
       transY1: 0,
@@ -24,7 +24,7 @@ Page({
           content: '恭喜您，中奖了',
           showCancel: false,
           success: (res) =>  {
-            this.machine.reset()
+            this.slotMachine.reset()
             if (res.confirm) {
               console.log('用户点击确定')
             } else if (res.cancel) {
@@ -42,7 +42,7 @@ Page({
   },
 
   onStart () {
-    this.machine.start()
+    this.slotMachine.start()
   }
 
 })
