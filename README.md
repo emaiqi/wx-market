@@ -147,7 +147,7 @@ git clone git@github.com:pfan123/wx-market.git
 - JS中实例调用：
 
 ```js 
- this.card = new Card(this,{
+ new Card(this,{
    data: [   //宫格信息，内联样式、是否是反面、是否运动、对应奖项
      {inlineStyle: '', isBack: false, isMove: false, award: "一等奖"},    
      {inlineStyle: '', isBack: false, isMove: false, award: "二等奖"},
