@@ -1,14 +1,14 @@
-## 营销组件
+## 小程序营销组件
 
-营销组件， WeChat marketing components.
+小程序营销组件， WeChat marketing components
 
 
 ## 支持营销玩法
 
 - 大转盘
 - 刮刮乐 
-- 老虎机	
-- 跑马灯 
+- 老虎机 
+- 水果机 
 - 九宫格翻纸牌 
 - 摇一摇 
 - 手势解锁
@@ -16,44 +16,38 @@
 
 ## 如何使用
 
-1.拉取仓库
+### 1.拉取仓库
 
 ```
 git clone git@github.com:pfan123/wx-market.git
 ```
 
-2.安装包依赖
-
-```
-npm i 
-```
-
-3.查看组件文件
+### 2.查看组件文件
 
 - 大转盘（Big wheel）: `/components/wheel/`
 - 刮刮乐 (Scratch tickets) : `/components/scratch/`
-- 老虎机	（Slot machine） : `/components/slotMachine/`
-- 跑马灯 （Fruit machine）: `/components/fruitMachine/`
+- 老虎机 （Slot machine） : `/components/slotMachine/`
+- 水果机 （Fruit machine）: `/components/fruitMachine/`
 - 九宫格翻纸牌 (Grid card): `/components/card/`
 - 摇一摇 (Shake): `/components/shake/`
 - 手势解锁 (Gesture lock): `/components/lock/`
 
-4.使用引入方式
+### 3.使用引入方式
 
-拷贝所需组件，到小程序目录pages路由目录
+拷贝所需组件，到小程序目录 **/pages** 路由目录
 
-➀使用大转盘组件
+#### ➀ 使用大转盘组件
 
 - WXSS中引用样式：`@import '../../components/wheel/wheel.wxss'`
 
 - WXML中引用结构：`<import src="../../components/wheel/wheel.wxml"/>`
 
-- JS中引用：`import Dial from '../../components/wheel/wheel.js'`
+- JS中引用：`import Wheel from '../../components/wheel/wheel.js'`
 
 - JS中实例调用：
 
 ```js
-   let wheel = new Wheel(this, {
+   this.wheel = new Wheel(this, {
      areaNumber: 8,   //抽奖间隔
      speed: 16,       //转动速度
      awardNumer: 2,    //中奖区域从1开始
@@ -62,9 +56,11 @@ npm i
        //运动停止回调  
      }
    })
- ```
+```
 
-➁使用刮刮乐组件
+
+
+#### ➁ 使用刮刮乐组件
 
 - WXML中引用结构：`<import src="../../components/scratch/scratch.wxml"/>`
 
@@ -85,12 +81,12 @@ npm i
       //清除画布回调
     }
   })
- ```
+```
 
- `注意：`小程序无globalCompositeOperation = 'destination-out'属性，所以采用 `clearRect` 做擦除处理
+> 注意：小程序无 globalCompositeOperation = 'destination-out'属性，所以采用 `clearRect` 做擦除处理
 
 
-➂使用老虎机组件
+### ➂ 使用老虎机组件
 
 - WXSS中引用样式：`@import '../../components/slotMachine/slotMachine.wxss'`
 
@@ -117,9 +113,9 @@ npm i
          //停止时回调        
      }      
    })
- ```
+```
 
-➃使用跑马灯组件
+#### ➃ 使用水果机组件
 
 - WXSS中引用样式：`@import '../../components/fruitMachine/fruitMachine.wxss'`
 
@@ -138,9 +134,9 @@ npm i
       //结束回调    
     }            
   })
- ``` 
+``` 
 
-➄使用九宫格翻纸牌组件
+#### ➄ 使用九宫格翻纸牌组件
 
 - WXSS中引用样式：`@import '../../components/card/card.wxss'`
 
@@ -167,9 +163,9 @@ npm i
      //结束回调， 参数对应宫格索引，对应奖项    
    }
  })
- ```
+```
 
- ➅使用摇一摇组件
+#### ➅ 使用摇一摇组件
 
 - WXSS中引用样式：`@import '../../components/shake/shake.wxss'`
 
@@ -186,9 +182,9 @@ npm i
           
     }            
   })
- ```
+```
 
- ➆使用手势解锁组件
+#### ➆ 使用手势解锁组件
 
  - WXSS中引用样式：`@import '../../components/lock/lock.wxss'`
 
@@ -205,7 +201,7 @@ npm i
    canvasId: 'canvasLock',
    drawColor: '#3985ff'        
  })
- ```   
+```   
 
 ## 效果图展示
 
@@ -213,7 +209,7 @@ npm i
 ![大转盘组件](http://img.pfan123.com/wx_market_1.gif?imageView2/1/w/356/h/634)
 ![刮刮乐组件](http://img.pfan123.com/wx_market_2.gif?imageView2/1/w/356/h/634) 
 ![老虎机组件](http://img.pfan123.com/wx_market_3.gif?imageView2/1/w/356/h/634) 
-![跑马灯组件](http://img.pfan123.com/wx_market_4.gif?imageView2/1/w/356/h/634) 
+![水果机组件](http://img.pfan123.com/wx_market_4.gif?imageView2/1/w/356/h/634) 
 ![九宫格翻纸组件](http://img.pfan123.com/wx_market_5.gif?imageView2/1/w/356/h/634) 
 ![摇一摇组件](http://img.pfan123.com/wx_market_6.gif?imageView2/1/w/356/h/634)  ![手势解锁组件](http://img.pfan123.com/wx_market_7.gif?imageView2/1/w/356/h/634) 
 
@@ -223,7 +219,7 @@ npm i
 - [x] 手势解锁组件                    2017-09-17
 - [x] 摇一摇组件                     2017-09-16
 - [x] 九宫格翻纸组件                  2017-09-16
-- [x] 增加老虎机组件、跑马灯组件         2017-09-02
+- [x] 增加老虎机组件、水果机组件         2017-09-02
 - [x] 增加刮刮乐组件                  2017-08-27
 - [x] 增加大转盘组件                  2017-08-26
 - [x] create wx-market repository  2017-08-22

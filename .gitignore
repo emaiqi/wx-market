@@ -17,4 +17,5 @@ gulpfile.js
 config.js
 jsdoc.conf.json
 test.js
+package.json
 out/
