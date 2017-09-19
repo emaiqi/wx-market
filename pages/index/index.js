@@ -19,7 +19,7 @@ Page({
       {
         id: 'fruitMachine',
         sub: 'fruitMachine',
-        name: '水果机组件'
+        name: '水果机'
       }, 
       {
         id: 'gridcard',
