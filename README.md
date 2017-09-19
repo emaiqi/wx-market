@@ -209,7 +209,7 @@ git clone git@github.com:pfan123/wx-market.git
 ![大转盘组件](http://img.pfan123.com/wx_market_1.gif?imageView2/1/w/356/h/634)
 ![刮刮乐组件](http://img.pfan123.com/wx_market_2.gif?imageView2/1/w/356/h/634) 
 ![老虎机组件](http://img.pfan123.com/wx_market_3.gif?imageView2/1/w/356/h/634) 
-![水果机组件](http://img.pfan123.com/wx_market_4.gif?imageView2/1/w/356/h/634) 
+![水果机组件](http://img.pfan123.com/wx_market_5.gif?imageView2/1/w/356/h/634) 
 ![九宫格翻纸组件](http://img.pfan123.com/wx_market_5.gif?imageView2/1/w/356/h/634) 
 ![摇一摇组件](http://img.pfan123.com/wx_market_6.gif?imageView2/1/w/356/h/634)  ![手势解锁组件](http://img.pfan123.com/wx_market_7.gif?imageView2/1/w/356/h/634) 
 
