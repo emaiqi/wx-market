@@ -19,7 +19,7 @@ Page({
       {
         id: 'fruitMachine',
         sub: 'fruitMachine',
-        name: '跑马灯'
+        name: '水果机组件'
       }, 
       {
         id: 'gridcard',

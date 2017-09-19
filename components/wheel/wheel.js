@@ -18,7 +18,7 @@
  * 
  * js 中调用
  * 
- *  let wheel = new Wheel(this, {
+ *  this.wheel = new Wheel(this, {
  *    areaNumber: 8,   //抽奖间隔
  *    speed: 16,       //转动速度
  *    awardNumer: 2,    //中奖区域从1开始
