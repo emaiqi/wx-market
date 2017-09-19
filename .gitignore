@@ -15,3 +15,6 @@ app.css
 app.wxss
 gulpfile.js
 config.js
+jsdoc.conf.json
+test.js
+out/
