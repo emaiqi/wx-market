@@ -112,7 +112,7 @@ export default class Lock {
   onTouchmove (e) {
       let now = new Date()
       let duration = now - prev
-      // 帧频率大于60丢弃
+      // 由于小程序canvas效率低下，帧频率大于60丢弃
       if (duration < Math.floor(1000 / LIMIT) ) return;
       prev = now
 
